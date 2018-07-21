@@ -62,26 +62,27 @@ function sliderShow(){
 		//touchs 是一个长度为1 的数组
 		var touch=e.touches[0];
 		startX=touch.clientX;
-		
+		console.log("startX"+startX);
 		//该方法将通知 Web 浏览器不要执行与事件关联的默认动作（如果存在这样的动作）
 		e.preventDefault();
 	}
 	$id("slidet").ontouchmove=function(e){
 		var touch=e.touches[0];
 		moveX=touch.clientX;
-		console.log(moveX)
-		
+		console.log("moveX"+moveX)
 		if(moveX<startX){
 			$id("slidet").style.left=$id("slidet").offsetLeft-(startX-moveX)+"px";
 			console.log($id("slidet").offsetLeft);
 		}else{
 			$id("slidet").style.left=$id("slidet").offsetLeft+(moveX-startX)+"px";
 		}
-		
+				
 		e.preventDefault();
 	}
 	$id("slidet").ontouchend=function(e){
-		console.log("ontouchend");
+		var touch=e.changedTouches[0];
+		endX=touch.clientX;
+		console.log("endX"+endX);
 	}
 }
 

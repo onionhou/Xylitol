@@ -54,7 +54,7 @@
  * 乱论图  移动端
  */
 .slide{position: relative; width: 100%;height: 153px;overflow: hidden;}
-.slide-list{position: absolute;width: 600%;left: -100%;transition: left 0.5s;}
+.slide-list{position: absolute;width: 600%;left: -100%;transition: left 500ms;}
 .block{position:relative;float: left; width: 16.66%;}
 
 .dot-list{position: absolute;right: 5%;bottom: 8%;}
