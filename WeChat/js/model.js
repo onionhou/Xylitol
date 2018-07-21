@@ -70,12 +70,8 @@ function sliderShow(){
 		var touch=e.touches[0];
 		moveX=touch.clientX;
 		console.log("moveX"+moveX)
-		if(moveX<startX){
-			$id("slidet").style.left=$id("slidet").offsetLeft-(startX-moveX)+"px";
-			console.log($id("slidet").offsetLeft);
-		}else{
-			$id("slidet").style.left=$id("slidet").offsetLeft+(moveX-startX)+"px";
-		}
+		
+		$id("slidet").style.left=$id("slidet").offsetLeft+(moveX-startX)+"px";
 				
 		e.preventDefault();
 	}
