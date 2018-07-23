@@ -13,31 +13,32 @@ function $tagName(name){
 /**
  * 轮播图
  */
-window.onload = sliderShow;
 
 
 function sliderShow(){ 
 	var stop;
 	var index=0;
 	var bd=document.documentElement.clientWidth;
-    console.log("sss")
     autoPage();
 	//自动 下一页
 	function autoPage(){
 		stop=setInterval(function(){
 				nextimg();
-			},1000);
-	}		
+			},5000);
+	}	
+	
+	
+	function trans(val){
+		$id("slidet").style.transform="translate3d("+val+"px,0px,0px)";
+	}
+	
 	//下一页
 	function nextimg(){
 		index++;
-		
 		if(index==$className("block").length-2){
-			$id("slidet").style.transform="scaleX("+bd+"px)";
 			index=0;
 		} 
-		$id("slidet").style.transform="translate3d("+-index*bd+"px,0px,0px)";
-		console.log(index);
+		trans(-index*bd);
 		//调用圆点移动  
 		dotMove();
 	}
@@ -47,15 +48,13 @@ function sliderShow(){
 		if(index==-1){
 			index=$className("block").length-3;
 		} 
-		$id("slidet").style.transform="translate3d("+-index*bd+"px,0px,0px)";
-		console.log(index);
+		trans(-index*bd);
 		//调用圆点移动  
-		dotMove()
+		dotMove();
 	}
 	
 	//右下角圆点 移动
 	function dotMove(){
-		console.log(index);
 		for(var i=0;i<$className("dot").length;i++){
 			$className("dot")[i].className="dot";
 		}
@@ -75,15 +74,13 @@ function sliderShow(){
 		//touchs 是一个长度为1 的数组
 		var touch=e.touches[0];
 		startX=touch.clientX;
-		console.log("startX"+startX);
-		//该方法将通知 Web 浏览器不要执行与事件关联的默认动作（如果存在这样的动作）
 	}
 	$id("slidet").ontouchmove=function(e){
 		e.preventDefault();
 		var touch=e.touches[0];
 		moveX=touch.clientX;
 		var endX=-index*bd+moveX-startX;
-		$id("slidet").style.transform="translate3d("+endX+"px,0px,0px)";
+		trans(endX);
 	}
 	$id("slidet").ontouchend=function(e){
 		var val;
@@ -91,7 +88,6 @@ function sliderShow(){
 		endX=touch.clientX;
 		val=startX-endX;
 		$id("slidet").style.transitionDuration="300ms";
-		console.log(val);
 		if(Math.abs(val)>=bd/2){
 			if(val>0){
 				nextimg();
@@ -100,11 +96,41 @@ function sliderShow(){
 				upimg();
 			}
 		}else{
-			$id("slidet").style.transform="translate3d("+-index*bd+"px,0px,0px)";
+			trans(-index*bd);
 		}
 		
 		autoPage();
 	}
 }
+sliderShow();
 
+function navbar(){
+	var gui=$className("guide");
+	var spc=$className("slipper-content");
+	for(var i=0;i<gui.length;i++){
+		(function(i){
+			gui[i].onclick=function(){
+				for(var j=0;j<gui.length;j++){
+						gui[j].className="guide";
+						spc[j].style.display="none"
+					}
+				gui[i].className="guide guide-event";
+				//横线动画
+				animaline(i);
+				//内容切换
+				cutdiv(i);
+			}
+		})(i);
+	}
+	//横线动画
+	function animaline(i){
+		var sbl=$id("sbline");
+		var sbw=sbl.offsetWidth;
+		sbl.style.transform="translate3d("+i*sbw+"px,0px,0px)"
+	}
+	function cutdiv(i){
+		spc[i].style.display="block";
+	}
+}
+navbar();
 

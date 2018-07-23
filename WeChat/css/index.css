@@ -3,7 +3,7 @@
  * 
  * */
 
-body{margin: 0px;padding: 0px;font-family: "微软雅黑"; }
+body{margin: 0px;padding: 0px;font-family: "微软雅黑";overflow-x: hidden;}
 ul{padding: 0px;margin: 0px;}
 ul li{list-style: none;}
 a{text-decoration: none;color: #4F4F4F;}
@@ -29,6 +29,10 @@ p{margin: 0px;}
 
 .headline{position: relative;margin-top: 20px;padding-top:10px; border-top: 1px solid #CCCCCC;}
 .hl-pic-lf{float: left;width: 8%;padding: 1.5% 4%;}
+
+.news{position: relative; height: 40px;overflow: hidden;}
+.news-list{position: absolute;top: -40px;transition: top 500ms;}
+.new-item{height: 40px;width: 85%;}
 .news p{font-size: 14px;color: #5A5A5A;font-weight: 500;}
 .hl-pic-rg{float:right; width: 2%; padding: 2% 2px;margin-right: 4%;}
 /**
@@ -44,8 +48,9 @@ p{margin: 0px;}
 .bl-col-2{text-align: center;}
 .bt-link{display: block;position: absolute;top: 0px; right: 4%;width: 5%;padding: 2%;}
 
-.bourn-content{position: relative; margin: 5%;}
-.bn-ct-city{height: 250px;}
+.bourn-content{position: relative; margin: 5%;margin-right:0px;height: 250px;overflow: hidden;}
+.bn-ct-list{left: -80%;}
+.bn-ct-block{position:relative;float: left; width: 13%;padding-right: 0.5%;}
 .bn-ct-filter{border-radius: 10px;overflow: hidden;}
 .bn-ct-filter img{filter: blur(2px);}
 .destination-box{position: absolute;top: 0px;left: 5%; width: 90%;}
@@ -67,8 +72,8 @@ p{margin: 0px;}
 .guide{float: left;width: 25%;text-align: center;padding: 10px 0px;}
 .guide-event{color: #FF8402;}
 .lab-event{font-size: 16px;}
-.slipper-box-line{float: left;width: 90%;padding: 0px 5%;}
-.sb-line{width: 25%;border-bottom:2px solid #FF8402;}
+.slipper-box-line{float: left;width: 90%;margin: 0px 5%;}
+.sb-line{width: 25%;border-bottom:2px solid #FF8402;transform:translate3d(0px,0px,0px);transition-duration: 300ms;}
 
 .slipper-content{padding: 2%;}
 .sppct-term{position: relative; float: left; width: 45%; border: 1px solid #F3F3F3;margin: 0px 2%;} 
@@ -80,3 +85,6 @@ p{margin: 0px;}
 .lab-degree{display: inline-block;float: right; font-size: 12px; color: #939393;padding: 0px;}
 .rating{position: absolute;top: 0px;left: 0px;padding-right:5px ; background: #939898;opacity: 0.8;border-radius: 0px 10px 10px 0px;}
 .rating-jewel{display: inline-block;float: left;width: 12px;}
+
+.home-base{position: fixed;bottom:0px;width: 100%;height: 8%; background: white;text-align: center;border-top:1px solid #D3D3DB;}
+.base-box{float: left; width: 25%;height:70%;margin-top: 2%;}
