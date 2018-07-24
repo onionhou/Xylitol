@@ -1,4 +1,5 @@
-.sns-wapper{background: #EFEFF7;}
+.sns-wapper{}
+.sns-cl-wapper{background: #EFEFF7;padding-bottom: 10px;}
 .vita-wapper{margin-bottom: 10px;}
 .vita-info-box{position: relative; width: 100%;height: 133px; background-image: url(../img/drawable-hdpi/my/bj.png);}
 
@@ -16,7 +17,7 @@
 .vita-balance{left: 10%;}
 .vita-integral{right: 10%;}
 
-.order-wapper{background: white;margin-bottom: 10px;}
+.order-wapper{background: white;}
 .order-my-box{padding: 0px 5%;}
 .order-my{width: 100%;height: 50px;border-bottom: 1px solid #F3F3F3;text-align: left}
 .lab-my{display: inline-block;width: 69%; line-height: 50px; font-size: 16px;color: #646464;text-align: left;}
