@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />  
+		<title>乐龄E站</title>
+		<link rel="stylesheet" type="text/css" href="css/model.css"/>
+		<link rel="stylesheet" type="text/css" href="css/seek.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+	</head>
+	<body>
+		<div>
+			<div class="seek-wapper">
+				<div class="seek-wap-box">
+					<div class="sp-box">
+						<input type="text" placeholder="搜索目的地/景点" class="inpt sp-inpt"/>
+						<img src="img/drawable-hdpi/02-sousuo.png" class="sp-sch"/>
+					</div>
+				</div>
+				<div class="seek-hot">
+					<h3>热门搜索</h3>
+					<ul class="sk-hot-wap">
+						<li class="sk-hot-item"><a href="####" class="hot-link">官府孤城</a></li>
+						<li class="sk-hot-item"><a href="####" class="hot-link">白画山</a></li>
+						<li class="sk-hot-item"><a href="####" class="hot-link">荠菜蝶园</a></li>
+						<li class="sk-hot-item"><a href="####" class="hot-link">成都美酒</a></li>
+						<li class="sk-hot-item"><a href="####" class="hot-link">林深时见鹿</a></li>
+						<li class="sk-hot-item"><a href="####" class="hot-link">海蓝时见鲸</a></li>
+					</ul>
+				</div>
+				<div class="seek-history">
+					<h3>热门搜索 <a href="javascript:DeleteHisAll('hislist')" class="his-del-all"><img src="img/drawable-hdpi/seek/delqb.png" class="del-all-icon"/></a></h3>
+					<ul class="his-list" id="hislist">
+						<li class="sk-his-item"><a href="####" class="hit-link">官府孤城 </a><a href="####" class="his-del"><img src="img/drawable-hdpi/seek/del.png" class="del-icon"/></a></li>
+						<li class="sk-his-item"><a href="####" class="hit-link">官府孤城 </a><a href="####" class="his-del"><img src="img/drawable-hdpi/seek/del.png" class="del-icon"/></a></li>
+						<li class="sk-his-item"><a href="####" class="hit-link">官府孤城 </a><a href="####" class="his-del"><img src="img/drawable-hdpi/seek/del.png" class="del-icon"/></a></li>
+						<li class="sk-his-item"><a href="####" class="hit-link">官府孤城 </a><a href="####" class="his-del"><img src="img/drawable-hdpi/seek/del.png" class="del-icon"/></a></li>
+						<li class="sk-his-item"><a href="####" class="hit-link">官府孤城 </a><a href="####" class="his-del"><img src="img/drawable-hdpi/seek/del.png" class="del-icon"/></a></li>
+						<li class="sk-his-item"><a href="####" class="hit-link">官府孤城 </a><a href="####" class="his-del"><img src="img/drawable-hdpi/seek/del.png" class="del-icon"/></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="js/model.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			function DeleteHisAll(id)
+			{
+				if(window.confirm("是否删除历史记录？"))
+				{
+					var childs=$id(id).childNodes;
+					for(var i=childs.length-1;i>=0;i--)
+					{
+						$id(id).removeChild(childs[i]);
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

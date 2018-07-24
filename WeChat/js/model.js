@@ -151,7 +151,7 @@ function sliderShow(){
 		autoPage();
 	}
 }
-sliderShow();
+
 
 function navbar(){
 	var gui=$className("guide");

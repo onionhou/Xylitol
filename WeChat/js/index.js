@@ -5,7 +5,7 @@
 
 window.onload = sliderTime();
 
-
+sliderShow();
 function sliderTime(){
 	var index=0;
 	var wid=$id("slidebt").children[0].offsetWidth;
@@ -162,6 +162,11 @@ function affair(){
 	
 	$tagName("body")[0].onscroll=function(){
 		$id("top").style.display=aspectRatio.scrollTop()>aspectRatio.snHeight()?"block":"none";
+	}
+	
+	$id("hunt").onfocus=function()
+	{
+		
 	}
 }
 affair();
