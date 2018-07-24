@@ -31,7 +31,8 @@ var aspectRatio = {
 	},
 	//网页被卷上去的
 	scrollTop : function(){
-		return document.body.scrollTop;
+		//这两个值总会有一个恒为0，所以不用担心会对真正的scrollTop造成影响。
+		return document.body.scrollTop+document.documentElement.scrollTop;
 	},
 	scrollLeft : function(){
 		return document.body.scrollLeft;

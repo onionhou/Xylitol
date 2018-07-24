@@ -155,12 +155,13 @@ function setcompatibility(){
 	}
 }
 setcompatibility();
-
-function onther(){
-	 console.log(aspectRatio.scrollTop());
-	 if(aspectRatio.scrollTop()>aspectRatio.snHeight()){
-	 	console.log("ss")
-	 	$id("top").style.display="block";
-	 }
+/**
+ * 事件
+ */
+function affair(){
+	
+	$tagName("body")[0].onscroll=function(){
+		$id("top").style.display=aspectRatio.scrollTop()>aspectRatio.snHeight()?"block":"none";
+	}
 }
-onther();
+affair();
