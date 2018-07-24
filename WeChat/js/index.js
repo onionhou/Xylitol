@@ -1,5 +1,4 @@
 
-
 /**
  * lun bo tu
  */
@@ -101,3 +100,67 @@ function newspaper(){
 	}
 }
 newspaper();
+/**
+ * 设置 兼容
+ */
+function setcompatibility(){
+	var as=aspectRatio.snHeight();
+	var asw=aspectRatio.snWidth();
+	
+	$id("slide").style.height=as/3.7+"px";
+	
+	for(var i=0;i<$className("block").length;i++){
+		$className("block")[i].style.height=as/3.7+"px";
+	}
+	$className("nav-list")[0].style.height=as/5.8+"px";
+	
+	for(var i=0;i<$className("bn-ct-filter").length;i++){
+		$className("bn-ct-filter")[i].style.height=as/5.06+"px";
+	}
+	for(var i=0;i<$className("cs-road-map").length;i++){
+		$className("cs-road-map")[i].style.height=as/9+"px";
+	}
+	for(var i=0;i<$className("sppct-term-map").length;i++){
+		if(i==0){
+			$className("sppct-term-map")[i].style.height=as/3.9+"px";
+			continue;
+		}
+		$className("sppct-term-map")[i].style.height=as/6+"px";
+	}
+	
+	
+	
+	switch (as){
+		case 568:
+			for(var i=0;i< $tagName("h4").length;i++){
+				 $tagName("h4")[i].style.fontSize="16px"
+			}
+			break;
+		
+		case 667:
+			for(var i=0;i< $tagName("h4").length;i++){
+				 $tagName("h4")[i].style.fontSize="18px"
+			}
+			break;
+		case 736:
+			for(var i=0;i< $tagName("h4").length;i++){
+				 $tagName("h4")[i].style.fontSize="20px"
+			}
+			break;	
+		default:
+			for(var i=0;i< $tagName("h4").length;i++){
+				 $tagName("h4")[i].style.fontSize="18px"
+			}
+			break;
+	}
+}
+setcompatibility();
+
+function onther(){
+	 console.log(aspectRatio.scrollTop());
+	 if(aspectRatio.scrollTop()>aspectRatio.snHeight()){
+	 	console.log("ss")
+	 	$id("top").style.display="block";
+	 }
+}
+onther();

@@ -8,13 +8,61 @@ function $className(name){
 function $tagName(name){
 	return document.getElementsByTagName(name);
 }
+var aspectRatio = {
+	//网页可见区域
+	clientWidth : function(){
+		return document.body.clientWidth;
+	},
+	clientHeight : function(){
+		return document.body.clientHeight;
+	},
+	offsetWidth : function(){
+		return document.body.offsetWidth;
+	},
+	offsetHeight : function(){
+		return document.body.offsetHeight;
+	},
+	//网页正文全文
+	scrollWidth : function(){
+		return document.body.scrollWidth;
+	},
+	scrollHeight : function(){
+		return document.body.scrollHeight;
+	},
+	//网页被卷上去的
+	scrollTop : function(){
+		return document.body.scrollTop;
+	},
+	scrollLeft : function(){
+		return document.body.scrollLeft;
+	},
+	//网页正文部分上,
+	snTop : function(){
+		return window.screen.screenTop;
+	},
+	snLeft : function(){
+		return window.screen.screenLeft;
+	},
+	//屏幕分辨率的高
+	snHeight : function(){
+		return window.screen.height;
+	},
+	snWidth : function(){
+		return window.screen.width;
+	},
+	//屏幕工作区域
+	avHeight : function(){
+		return window.screen.availHeight;
+	},
+	avWidth : function(){
+		return window.screen.availWidth;
+	}
+}
 
 
 /**
  * 轮播图
  */
-
-
 function sliderShow(){ 
 	var stop;
 	var index=0;
