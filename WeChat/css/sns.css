@@ -33,7 +33,7 @@
 .grid-wapper{background: white;}
 .grid-gather-box{padding: 0px 5%;}
 .grid-title{width: 100%;height: 50px;border-bottom: 1px solid #F3F3F3;text-align: left}
-.grid-nav{height: 250px;}
+.grid-nav{height: 300px;}
 .grid-item{width: 25%;}
 .grid-item-ak{width: 100%;}
 .ggb-gwc{width: 30%;position: relative;margin: 0 auto;top: 50%; transform: translateY(-50%);}
