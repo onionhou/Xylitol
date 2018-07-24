@@ -3,7 +3,7 @@
  * 
  * */
 
-body{margin: 0px;padding: 0px;font-family: "微软雅黑";overflow-x: hidden;}
+body{margin: 0px;padding: 0px;font-family: "微软雅黑";overflow-x: hidden;width: 100%;}
 ul{padding: 0px;margin: 0px;}
 ul li{list-style: none;}
 a{text-decoration: none;color: #4F4F4F;}
