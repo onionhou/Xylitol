@@ -22,6 +22,7 @@ p{margin: 0px;}
 .scan{float: right;width: 10%;}
 
 .other-slide{margin-bottom: 20px;}
+.slide{overflow: hidden;}
 .nav-list{width: 100%;}
 .nav-item-way{float: left;width: 16%;margin: 0px 2%;text-align: center;}
 .way-img{width: 80%;padding: 5px;}
