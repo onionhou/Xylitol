@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />  
 		<title>我的</title>
-			<link rel="stylesheet" type="text/css" href="css/model.css"/>
+		<link rel="stylesheet" type="text/css" href="css/model.css"/>
 		<link rel="stylesheet" type="text/css" href="css/sns.css"/>
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
 	</head>
@@ -13,9 +13,9 @@
 			<div class="sns-wapper">
 				<div class="sns-cl-wapper">
 					<div class="vita-wapper">
-						<div class="vita-info-box">
+						<div class="vita-info-box" id="vbox">
 							<div class="vita-show">
-								<div class="vs-via">
+								<div class="vs-via" id="vvia">
 									<img src="img/drawable-hdpi/my/dm.jpg"/>
 								</div>
 								<a href="####" style="color: white;">NotepBook</a>
@@ -45,36 +45,41 @@
 								<ul class="odrder-nav-list">
 									<li class="odn-item">
 										<a href="####" class="odn-item-ak">
-											<img src="img/drawable-hdpi/my/1-gwc.png" class="odn-tupa odn-gwc"/>
-											<br />
+											<div class="odn-tupa-box">
+												<img src="img/drawable-hdpi/my/1-gwc.png" class="odn-tupa"/>
+											</div>
 											<span class="spann">购物车</span>
 										</a>	
 									</li>
 									<li class="odn-item">
 										<a href="####" class="odn-item-ak">
-											<img src="img/drawable-hdpi/my/2-dfk.png" class="odn-tupa"/>
-											<br />
+											<div class="odn-tupa-box" style="padding-top: 1.5px;">
+												<img src="img/drawable-hdpi/my/2-dfk.png" class="odn-tupa"/>
+											</div>
 											<span class="spann">待付款</span>
 										</a>	
 									</li>
 									<li class="odn-item">
 										<a href="####" class="odn-item-ak">
-											<img src="img/drawable-hdpi/my/3-dfh.png" class="odn-tupa"/>
-											<br />
+											<div class="odn-tupa-box">
+												<img src="img/drawable-hdpi/my/3-dfh.png" class="odn-tupa"/>
+											</div>
 											<span class="spann">待发货</span>
 										</a>	
 									</li>
 									<li class="odn-item">
 										<a href="####" class="odn-item-ak">
-											<img src="img/drawable-hdpi/my/4-dsh.png" class="odn-tupa"/>
-											<br />
+											<div class="odn-tupa-box" style="padding-top: 1.5px;">
+												<img src="img/drawable-hdpi/my/4-dsh.png" class="odn-tupa"/>
+											</div>
 											<span class="spann">待收货</span>
 										</a>	
 									</li>
 									<li class="odn-item">
 										<a href="####" class="odn-item-ak">
-											<img src="img/drawable-hdpi/my/5-thh.png" class="odn-tupa"/>
-											<br />
+											<div class="odn-tupa-box" style="padding-top: 1.5px;">
+												<img src="img/drawable-hdpi/my/5-thh.png" class="odn-tupa"/>
+											</div>
 											<span class="spann">退换货</span>
 										</a>	
 									</li>
@@ -218,6 +223,7 @@
 				</div>
 			</div>
 		</div>
-		
+	    <script type="text/javascript" src="js/model.js" ></script>
+		<script type="text/javascript" src="js/sns.js" ></script>
 	</body>
 </html>
