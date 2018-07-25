@@ -1,0 +1,16 @@
+.notice{background: #EEEEEE;min-height: 100%;}
+.notice-wapper{width:100%;}
+.not-top{width: 100%;height: 80px;}
+.notp-title{position: relative; width: 172px;height: 29px; margin: 0 auto; top: 50%; transform: translateY(-50%);}
+.notp-mess{float: left; padding: 5px 15px; background: white; font-size: 14px;color: #686868;}
+.notp-active{background: #FF8402;color: white;}
+
+.not-sys-mess{position: relative; width: 90%;padding:0px 5%;}
+.mess-item-box{display: block;width: 100%;}
+.mess-item-box h4{margin: 0px;margin-bottom: 10px;font-family: "宋体";}
+.mess-item{margin-bottom: 10px;padding: 10px 20px; background: white;border-radius: 5px;}
+.mib-teletext{float: left;}
+.mib-timg{float: left;width: 20%;height: 50px; margin-right: 10px;}
+.mib-txt{float: left;width: 75%;height: 50px;}
+.pptime{text-align: right;}
+#blank{height: 40px;}

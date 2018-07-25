@@ -52,3 +52,6 @@ a{
 #blank{height: 54.36px;}
 
 .spann{color: #4F4F4F;}
+
+.odn-tupa-box{position: relative;}
+.amount-box{position: absolute;top: -14px;left: 32px; height: 15px;padding:0px 4px;  border-radius: 10px; background: red;font-size: 12px;line-height: 15px; color: white;}

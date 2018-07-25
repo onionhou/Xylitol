@@ -6,7 +6,7 @@ img{width: auto;height: auto;max-width: 100%;max-height: 100%;}
 p{margin: 0px;}
 /*取消a标签在移动端的点击背景颜色*/
 a{
--webkit-tap-highlight-color:rgba(255,255,255,1);
+-webkit-tap-highlight-color:rgba(255,255,255,0);
 -webkit-user-select:none;
 -moz-user-focus:none;
 -moz-user-select: none;
@@ -29,10 +29,8 @@ a{
 
 .pp{font-size: 12px;}
 .pp-line{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.pp-twoline{overflow: hidden;
-						display: -webkit-box;
-						-webkit-line-clamp: 2;
-						-webkit-box-orient: vertical;}
+.pp-twoline{overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.pp-treeline{overflow: hidden;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;}						
 .lab{padding: 2px 5px;border-radius: 2px;font-size: 12px;}
 
 .spann{font-size: 14px;color: #A7ADB2;}
