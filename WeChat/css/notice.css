@@ -9,7 +9,7 @@
 .mess-item-box{display: block;width: 100%;}
 .mess-item-box h4{margin: 0px;margin-bottom: 10px;font-family: "宋体";}
 .mess-item{margin-bottom: 10px;padding: 10px 20px; background: white;border-radius: 5px;}
-.mib-teletext{float: left;}
+.mib-teletext{float: left;margin-bottom: 5px;}
 .mib-timg{float: left;width: 20%;height: 50px; margin-right: 10px;}
 .mib-txt{float: left;width: 75%;height: 50px;}
 .pptime{text-align: right;}

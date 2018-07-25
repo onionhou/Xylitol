@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />  
+		<title>成为店长</title>
+		<link rel="stylesheet" type="text/css" href="css/model.css"/>
+		<link rel="stylesheet" type="text/css" href="css/apply.css"/>
+	</head>
+	<body id="body">
+		<div class="apply-wapper">
+			<form>
+				<div class="apply-form-row">
+					<h4>我要成为店长</h4>
+					<p class="afr-pp">邀请人:<span class="spann afr-name">&nbsp;name</span></p>
+				</div>
+				<div class="apply-form-row">
+					<div class="af-row-item">
+						<label class="lab lab-name">真实姓名</label>
+						<input type="text" placeholder="请输入名字" class="afri-inpt"/>
+					</div>
+					<div class="af-row-item">
+						<label class="lab lab-name">手机号</label>
+						<input type="text" placeholder="请输入联系电话" class="afri-inpt"/>
+					</div>
+					<div class="af-row-item">
+						<label class="lab lab-name">身份证号码</label>
+						<input type="text" placeholder="请输入18位身份证号码" class="afri-inpt"/>
+					</div>
+				</div>
+				<div class="apply-form-row">
+					<table class="tabe tabe-apply">
+						<tr>
+							<td>
+								<img src="img/drawable-hdpi/applymanager/llqx.png" class="iocn-tb-ly"/>
+								<label class="lab lab-tb-ly">乐龄权限</label>
+							</td>
+							<td><img src="img/drawable-hdpi/applymanager/xiala.png" style="width: 8%;"/></td>
+						</tr>
+						<tr>
+							<td>
+								<img src="img/drawable-hdpi/applymanager/dlxd.png" class="iocn-tb-ly"/>
+								<label class="lab lab-tb-ly">独立小店</label>
+							</td>
+							<td>
+								<p class="pp-tb-ly">拥有自己的小店及推广二维码</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="img/drawable-hdpi/applymanager/hongb.png" class="iocn-tb-ly"/>
+								<label class="lab lab-tb-ly">销售拿奖励</label>
+							</td>
+							<td>
+								<p class="pp-tb-ly">成为店长后卖出商品,可以获得奖励</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="border: 0px;">
+								林深时见鹿，海蓝时见鲸<br />
+								情深缘浅<br />
+								林深时雾起，海蓝时浪涌
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div style="margin-top: 40px;">
+					<button type="submit" class="bttn-default bttn-apply">申请</button>	
+				</div>
+			</form>	
+		</div>
+		<div class="apply-fixed" id="appfxd"></div>
+		<div class="fixed-wapper">
+				<div class="fw-hint">
+					<h3>申请失败</h3>
+					<p>身份证或电话号码错误</p>
+				</div>
+				<div class="fw-affirm">
+					确认
+				</div>
+			</div>	
+		<script type="text/javascript" src="js/model.js" ></script>
+		<script type="text/javascript" src="js/applyManager.js" ></script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+#body{background: #EEEEEE;}
+			
+h4{margin: 0px;font-family: "microsoft yahei";color: #111111;}
+input::-webkit-input-placeholder { /* WebKit browsers */ color: #CCCCCC;font-size: 15px; } 
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color: #CCCCCC;font-size: 15px; } 
+input::-moz-placeholder { /* Mozilla Firefox 19+ */ color: #CCCCCC;font-size: 15px; } 
+input:-ms-input-placeholder { /* Internet Explorer 10+ */ color: #CCCCCC;font-size: 15px; }
+.apply-wapper{margin: 10px;}
+.apply-form-row{background: white;margin-bottom: 10px;padding: 10px;border-radius: 5px;}
+
+.af-row-item{padding: 10px 0px;border-bottom: 1px solid #EFEFF7;}
+.afr-pp{font-size: 15px;color: #7D7D7D;margin-top: 5px;}
+.afr-name{ color: #FF890A;}
+.lab-name{display: inline-block;width: 31%;font-size: 16px;color: #7B7B7B;}
+.afri-inpt{border: 0px;color:#CCCCCC;padding: 5px 0px;width: 60%;}
+.afri-inpt:focus{border: 0px white;}
+
+.tabe-apply tr td{padding: 15px 0px;text-align: right;border-bottom: 1px solid #EFEFF7;}
+.tabe-apply tr td:first-child{text-align: left;}
+.lab-tb-ly{font-size: 15px;color: #757575;}
+.iocn-tb-ly{width: 15%;}
+.pp-tb-ly{font-size: 14px;color: #B1B1B1;}
+.bttn-apply{width: 100%; background: #FF8402;color: white;font-size: 15px;padding: 10px 0px;border-radius: 5px;}
+
+.apply-fixed{position: absolute;width: 100%;top: 0px;background: black;opacity: 0.3;}
+.fixed-wapper{position: absolute;top: 0px; background: white;opacity: 1;z-index: 999;}
