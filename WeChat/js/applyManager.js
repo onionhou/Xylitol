@@ -18,11 +18,15 @@ function applicant(){
 	{
 		switch(i)
 		{
-			case 0: if(!name.test(afr[i].value)){fault();$id("crad").innerHTML=i+""}
+			case 0: if(!name.test(afr[i].value))
+					{
+						fault(); 
+						return false;
+						}
 			break;
-			case 1: if(!tele.test(afr[i].value)){fault();$id("crad").innerHTML=i+""}
+			case 1: if(!tele.test(afr[i].value)){fault();return false;}
 			break;
-			case 2: if(!card.test(afr[i].value)){fault();$id("crad").innerHTML=i+""}
+			case 2: if(!card.test(afr[i].value)){fault();return false;}else{$id("form").submit()}
 			break;
 			default:
 			break;

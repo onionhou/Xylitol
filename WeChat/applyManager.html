@@ -9,7 +9,7 @@
 	</head>
 	<body id="body">
 		<div class="apply-wapper">
-			<form>
+			<form method="post" name="apply-form" id="form">
 				<div class="apply-form-row">
 					<h4>我要成为店长</h4>
 					<p class="afr-pp">邀请人:<span class="spann afr-name">&nbsp;name</span></p>
@@ -65,12 +65,12 @@
 					</table>
 				</div>
 				<div style="margin-top: 40px;">
-					<button type="submit" class="bttn-default bttn-apply" onclick="applicant()">申请</button>	
+					<button type="button" class="bttn-default bttn-apply" onclick="applicant()">申请</button>	
 				</div>
 			</form>	
 		</div>
-		<div class="apply-fixed" id="appfxd"></div>
-		<div class="fixed-wapper" id="fwp">
+		<div class="apply-fixed" id="appfxd" style="display: none;"></div>
+		<div class="fixed-wapper" id="fwp" style="display: none;">
 			<div class="fw-box">
 				<div class="fw-hint">
 					<h3>申请失败</h3>
