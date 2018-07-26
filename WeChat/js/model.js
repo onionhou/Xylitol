@@ -193,3 +193,8 @@ function navbar(){
 }
 navbar();
 
+function setH(){
+	$className("slipper-content")[0].style.height=$className("slipper-list")[0].offsetHeight+"px";
+}
+
+setH();

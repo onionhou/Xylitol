@@ -82,3 +82,5 @@ function tchActive(childs,num,j){
 	childs[num].className="twp-choice-item";
 	childs[j].className="twp-choice-item tch-active";
 }
+
+
