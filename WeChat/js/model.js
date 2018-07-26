@@ -8,6 +8,16 @@ function $className(name){
 function $tagName(name){
 	return document.getElementsByTagName(name);
 }
+
+function $children(parent){
+	if(typeof(parent) == 'string'){
+		return $id(parent).children;
+	}else{
+		return parent.children;
+	}
+}
+
+
 var aspectRatio = {
 	//网页可见区域
 	clientWidth : function(){

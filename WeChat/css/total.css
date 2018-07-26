@@ -1,0 +1,15 @@
+.bd{position: fixed;}
+.total-wapper{width: 100%;}
+.twp-top-wapper{position: fixed;width: 100%; z-index: 2;}
+.twp-screen{float: left; top: 0px;padding: 4% 5%;width: 90%;text-align: center;background: white;border-bottom: 1px solid #F5F5F5;border-top: 1px solid #F5F5F5;z-index: 2;}
+.ts-item{float: left;width: 24%;border-right: 1px solid #F8F8F8;font-size: 13px; color: #595959;}
+.ts-item-active{color: #FE7400;}
+
+.twp-choice{margin-top: 13.1%;background: white;}
+.twp-choice-list{width: 100%;background: white;}
+.twp-choice-item{padding: 2% 8%;border-bottom: 1px solid #F2F2F2;font-size: 13px;color: #595959;}
+.tch-active{color: #FE7400;}
+
+.fixed-bk{position: fixed;width: 100%;height: 100%;background: #000000;opacity: 0.2;z-index: 1;}
+
+.slipper-content{padding-top: 13.1%;}

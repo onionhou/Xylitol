@@ -1,5 +1,5 @@
 html{overflow: hidden;height: 100%;}
-#body{background: #EEEEEE;}
+body{background: #EEEEEE;}
 			
 h4{margin: 0px;font-family: "microsoft yahei";color: #111111;}
 input::-webkit-input-placeholder { /* WebKit browsers */ color: #CCCCCC;font-size: 15px; } 
