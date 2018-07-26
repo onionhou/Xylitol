@@ -66,7 +66,6 @@ p{margin: 0px;}
 
 .wapper-theme{width: 100%;background: white;}
 
-.slipper-content{height: 500px;}
 .slipper{width: 100%;}
 .slipper-box{margin-bottom: 20px;}
 .slipper-guide{height: 30px; padding: 0px 5%;}
@@ -76,7 +75,8 @@ p{margin: 0px;}
 .slipper-box-line{float: left;width: 90%;margin: 0px 5%;}
 .sb-line{width: 25%;border-bottom:2px solid #FF8402;transform:translate3d(0px,0px,0px);transition-duration: 300ms;}
 
-.slipper-content{padding: 2%;}
+.slipper-content{position: relative; padding: 2%;}
+.slipper-list{float: left;}
 .sppct-term{position: relative; float: left; width: 45%; border: 1px solid #F3F3F3;margin: 0px 2%;} 
 .prefs{width: 95%;}
 .sppct-term-details p{font-size: 16px;color: #46464B;}

@@ -3,53 +3,50 @@ var as=aspectRatio.snHeight();
 
 var tsm=$className("ts-item");
 var tcl=$className("twp-choice-list");
-var index=-1;
-var flag=false;
+var index=0;
+
 
 for(var i=0;i<tsm.length;i++){
 	(function(i){
+		var flag=false;
 		tsm[i].onclick=function(){
 			$id("body").className="bd";
 			
 			if($id("fixedbk").style.display!="block"){
 				$id("fixedbk").style.display="block";
 			}
-			console.log("flag"+flag+i+index);
-			if(!flag){
-				if(index!=i)
-				{
-					tsmActive(i);
-				}else{
-					tcl[i].style.display="none";
-					$id("fixedbk").style.display="none";
-					index=-1;
-					flag=false;
-				}
-			}
-			
+			console.log(flag+"----i:"+i)
+			flag=tsmActive(i,flag);
+			console.log(flag+"====i:"+i)	
 		}
 		setScroll(i);
 		
 		totalA(i);
-	})(i)
+	})(i);
 }
 
-$id("fixedbk").onclick=function(){
-	$id("fixedbk").style.display="none";
-	$id("tpchoice").style.display="none";
-	$id("body").className="";
-}
 
-function tsmActive(i){
-		if(index!=-1)
-		{
+function tsmActive(i,flag){
+	
 		tcl[index].style.display="none";
 		tsm[index].className="ts-item";
-		}
-		index=i;
+	if(!flag)
+	{
 		tcl[i].style.display="block";
 		tsm[i].className="ts-item ts-item-active";
+		flag=true;
+	}else{
+		$id("fixedbk").style.display="none";
+		$id("body").className="";
+		index=0;
+		flag=false;
+	}
+		
+		index=i;
+		return flag;
 }
+
+
 
 function totalA(i){
 	var num=0;

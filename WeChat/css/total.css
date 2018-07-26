@@ -13,3 +13,10 @@
 .fixed-bk{position: fixed;width: 100%;height: 100%;background: #000000;opacity: 0.2;z-index: 1;}
 
 .slipper-content{padding-top: 13.1%;}
+
+.home-base{position: fixed;padding-bottom:10px ; bottom:0px;width: 100%;height: 8%; background: white;text-align: center;border-top:1px solid #D3D3DB;}
+.base-box{float: left; width: 25%;height:40%;margin-top: 2%;}
+.bbp{color: #6C6C6C;}
+.bbp-active{color: #FF8402;}
+
+#blank{height: 64.36px;}
