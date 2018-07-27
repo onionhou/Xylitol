@@ -16,6 +16,8 @@ a{
 .lab-word{color: white;}
 .lab-numb{color: #FFBD04;}
 .lab-oper{color: white;border: 1px solid white;border-radius:10px; padding: 0px 20px;}
+img{width: auto;height: auto;max-width: 100%;max-height: 100%;}
+
 .lab-setting{display: block;position: absolute;top: 3%;right: 3%;color: white;}
 
 .vita-figure{position: absolute;top: 25%;text-align: center;}
@@ -42,7 +44,6 @@ a{
 .grid-item{width: 25%;}
 .grid-item-ak{width: 100%;}
 .ggb-gwc{width: 30%;position: relative;margin: 0 auto;top: 50%; transform: translateY(-50%);}
-
 
 .home-base{position: fixed;padding-bottom:10px ; bottom:0px;width: 100%;height: 8%; background: white;text-align: center;border-top:1px solid #D3D3DB;}
 .base-box{float: left; width: 25%;height:40%;margin-top: 2%;}

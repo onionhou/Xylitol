@@ -1,3 +1,4 @@
+img{width: auto;height: auto;max-width: 100%;max-height: 100%;}
 .bd{position: fixed;}
 .total-wapper{width: 100%;}
 .twp-top-wapper{position: fixed;width: 100%; z-index: 2;}

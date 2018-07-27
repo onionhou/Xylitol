@@ -2,7 +2,6 @@ body{margin: 0px;padding: 0px;font-family: "微软雅黑";overflow-x: hidden;wid
 ul{padding: 0px;margin: 0px;}
 ul li{list-style: none;}
 a{text-decoration: none;color: #4F4F4F;}
-img{width: auto;height: auto;max-width: 100%;max-height: 100%;}
 p{margin: 0px;}
 /*取消a标签在移动端的点击背景颜色*/
 a{

@@ -70,6 +70,46 @@ var aspectRatio = {
 	}
 }
 
+//获取单个图片的原始信息
+function getImgNaturalDimensions(oImg,callback){
+	
+	var nWidth,nHeight;
+	if(!oImg.naturalWidth)
+	{
+		//HTML5 browsers
+		nWidth = oImg.naturalWidth;
+		nHeight = oImg.naturalHeight;
+		callback({w: nWidth,h:nHeight});
+	}
+	else
+	{
+		//IE 6/7/8
+		var nImg = new Image();
+		nImg.src = oImg.src;
+		nImg.onload = function()
+		{
+			var nWidth = nImg.width,
+			    nHeight = nImg.height;
+			    console.log(oImg)
+		    callback({w: nWidth,h:nHeight});
+		}
+		nImg.src = oImg.src
+	}
+}
+/**
+ * js添加onload事件的通用方法
+ */
+function addLoadEvent(func) {
+    var oldonload=window.onload;   //把现有的事件处理函数的值存起来
+    if(typeof window.onload != 'function') {  //如果没有绑定任何函数
+        window.onload=func;  //添加新的函数
+    } else {
+        window.onload = function() {
+            oldonload();
+            func();   //把新函数追加到现有指令的末尾
+        }
+    }
+}
 
 /**
  * 轮播图
@@ -194,7 +234,17 @@ function navbar(){
 navbar();
 
 function setH(){
-	$className("slipper-content")[0].style.height=$className("slipper-list")[0].offsetHeight+"px";
+	var bak=$className("black");
+	var slip=$className("slipper-content");
+	console.log(bak.length)
+	for(var i=0;i<bak.length;i++){
+		bak[i].style.height=$className("home-base")[0].offsetHeight+"px";
+		console.log(bak[i].offsetHeight);
+	}
+	if(typeof(slip[0])!= "undefined"){
+		slip[0].style.height=slip[0].offsetHeight+"px";
+	}
+	
 }
 
 setH();
