@@ -106,6 +106,8 @@ newspaper();
 function setcompatibility(){
 	var as=aspectRatio.snHeight();
 	var asw=aspectRatio.snWidth();
+	var stmp=$className("sppct-term-map");
+	
 	
 	$id("slide").style.height=as/3.7+"px";
 	
@@ -120,12 +122,13 @@ function setcompatibility(){
 	for(var i=0;i<$className("cs-road-map").length;i++){
 		$className("cs-road-map")[i].style.height=as/9+"px";
 	}
-	for(var i=0;i<$className("sppct-term-map").length;i++){
-		if(i==0){
-			$className("sppct-term-map")[i].style.height=as/3.9+"px";
+	for(var i=0;i<stmp.length;i++){
+		 var pers=stmp[i].parentNode.className;
+		if(pers=="sppct-term prefs"){
+			stmp[i].style.height=as/3.9+"px";
 			continue;
 		}
-		$className("sppct-term-map")[i].style.height=as/6+"px";
+		stmp[i].style.height=as/6+"px";
 	}
 	
 	
