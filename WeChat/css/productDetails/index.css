@@ -44,4 +44,4 @@ img{width: auto;height: auto;max-height: 100%;max-width: 100%;border: 0px;}
 .dwr-coupon-box span{display: inline-block;float: left;}
 .coupon{float: left; width: 22%;margin-left:2%;text-align: center;background: url(../../img/drawable-hdpi/productDetails/wlq.png);background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;}
 .coupon label:first-child{font-size: 24px;}
-.coupon label:nth-child(3){font-size: 9px;}
+.coupon label:nth-child(3){font-size: 1px;}
