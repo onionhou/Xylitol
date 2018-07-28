@@ -1,6 +1,6 @@
 img{width: auto;height: auto;max-height: 100%;max-width: 100%;border: 0px;}
 .details{background: #EEEEEE;}
-.det-fiexd-top{position: fixed;width: 100%;}
+.det-fiexd-top{position: fixed;width: 100%;z-index: 998;}
 
 .top-adv{float: left;width:100%;background: #4A4A54;}
 .top-adv-attention{float: left;width: 61%;margin-left: 5%;}
@@ -15,7 +15,7 @@ img{width: auto;height: auto;max-height: 100%;max-width: 100%;border: 0px;}
 .adv-close{position: absolute; top: 0px;right: 0px;padding: 1px; background: #323232;}
 .adv-close img{display:block; width: 11px;height: 11px;}
 
-.det-top-adv{float: left;width: 100%;border-bottom: 1px solid #DEE3E2;}
+.det-top-adv{float: left;width: 100%;border-bottom: 1px solid #DEE3E2;background: white;z-index: 999;}
 .det-black{float: left;width: 10%;}
 .det-black a{display: inline-block;padding: 10px;height: 20px;}
 .det-title{float: left;line-height: 40px;width: 70%;text-align: center;}
@@ -40,8 +40,58 @@ img{width: auto;height: auto;max-height: 100%;max-width: 100%;border: 0px;}
 .dci-pice{color: red;font-size: 19px;}
 .dci-cy{display: inline-block;float: right;}
 
-.dwr-coupon-box{float: left; width: 100%;}
-.dwr-coupon-box span{display: inline-block;float: left;}
-.coupon{float: left; width: 22%;margin-left:2%;text-align: center;background: url(../../img/drawable-hdpi/productDetails/wlq.png);background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;}
-.coupon label:first-child{font-size: 24px;}
-.coupon label:nth-child(3){font-size: 1px;}
+.dwr-coupon-box{float: left; width: 100%;padding: 10px 0px;margin-bottom: 10px; border-bottom: 1px solid #EEEEEE;}
+.dwr-coupon-box span{display: inline-block;float: left;padding: 0px 10px;line-height: 47px;}
+.coupon{float: left; width: 22%;margin-left:2%;text-align: center;color:white;background: url(../../img/drawable-hdpi/productDetails/wlq.png);background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;}
+.coupon label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.coupon label:first-child{font-size: 20px;}
+.coupon label:nth-child(3){font-size: 12px;}
+
+.trip-site{padding: 10px 5px;}
+.site-irc{display: inline-block;float: right;font-size: 12px; color: #FE8313;}
+.site-irc img{width: 10%;}
+
+.trip-date-list{height: 56px; width: 100%; padding: 10px;text-align: center;}
+.date-item{float: left;width:22%;padding: 10px 0px;margin-left: 5px; border: 1px solid #EAEAEA;font-size: 13px;}
+.date-item a{display: inline-block;}
+.dim-time-default{color: #959595;}
+.dim-time{ color: #171717;font-weight: 500;}
+.dim-pice{color: #FE8404;}
+.more-date{height: 34px;line-height: 34px;color: #313136;}
+.more-date i{font-size: 15px;}
+
+.dwc-nav-guide{background: white;text-align: center;border-bottom: 1px solid #F0F0F0;}
+.guide-item{float: left;width: 33.3%;padding: 10px 0px; font-size: 15px;}
+.guide{color: #636363;}
+.guide-event{color: #FD8100;}
+
+.guide-line{float: left; width: 100%;border-bottom: 1px solid #F0F0F0;}
+.silde-line{width: 33.3%;border-bottom: 1px solid #FD8100;}
+
+.det-wap-content{background: white;margin-bottom: 10px;}
+
+.more-tour{background: white;}
+.mt-tit{text-align: center;}
+.mt-tit h5{margin: 0px;line-height: 40px;color: #555555;}
+.slipper-content{position: relative; padding: 2%;}
+.slipper-list{float: left;}
+.sppct-term{position: relative; float: left; width: 45%; border: 1px solid #F3F3F3;margin: 0px 2%;} 
+.prefs{width: 95%;}
+.sppct-term-details p{font-size: 16px;color: #46464B;}
+.pp{padding: 0px 4%;}
+.pp-pice{line-height: 30px;}
+.std-pice{font-size: 14px; color: #F74D5F;font-weight: bold;}
+.lab-degree{display: inline-block;float: right; font-size: 12px; color: #939393;padding: 0px;}
+.rating{position: absolute;top: 0px;left: 0px;padding-right:5px ; background: #939898;opacity: 0.8;border-radius: 0px 10px 10px 0px;}
+.rating-jewel{display: inline-block;float: left;width: 12px;}
+
+
+.det-fiexd-floor{position: fixed;bottom: 0px; width: 100%;background: white;border-top: 1px solid #F0F0F0;}
+.dff-consider-box{float: left; width: 50%;text-align: center;}
+.consider-item{float: left; width: 50%;}
+.cdi-lk{display: inline-block;width: 100%;padding: 5px 0px;}
+.cdi-item-box{position: relative;width: 100%;}
+.cib-timg{width: 20%;position: relative;margin: 0 auto;}
+
+.dff-buy-box{float: left;width: 46%;height: 53;text-align: center;padding:6px 2%;}
+.buy{display: block;position: relative;margin: 0 auto;padding: 10px; background: #FF8402;color: white;font-size: 15px;border-radius: 5px;}
