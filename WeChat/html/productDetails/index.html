@@ -8,12 +8,12 @@
 		<link rel="stylesheet" type="text/css" href="../../css/model.css"/>
 		<link rel="stylesheet" type="text/css" href="../../css/productDetails/index.css"/>
 	</head>
-	<body>
-		<div class="details">
-			<div class="details-wapper">
+	<body id="body" class="bg-shut">
+		<div class="details" id="details">
+			<div class="details-wapper" id="detailswp">
 				<div class="det-fiexd-top">
-					<div class="top-adv" style="">
-						<div class="top-adv-attention">
+					<div class="top-adv" id="topadv" style="">
+						<div class="top-adv-attention" >
 							<div class="logo">
 								logo
 							</div>
@@ -26,12 +26,12 @@
 							<a href="####" class="adv-att-click">点击关注</a>
 						</div>
 						<div class="adv-close">
-							<a href="####">
+							<a href="JavaScript:void(0)" onclick="closeAdv()">
 								<img src="../../img/drawable-hdpi/productDetails/close.png" />
 							</a>	
 						</div>
 					</div>
-					<div class="det-top-adv">
+					<div class="det-top-adv" id="dtopadv">
 						<div class="det-black">
 							<a href="####">
 								<img src="../../img/drawable-hdpi/productDetails/back.png"/>
@@ -41,8 +41,8 @@
 							商品介绍
 						</div>
 						<div class="det-oper">
-							<a href="####">
-								<img src="../../img/drawable-hdpi/productDetails/enshrine1.png" class="enshrine"/>
+							<a href="javascript:void(0)" onclick="setEnshrine()">
+								<img src="../../img/drawable-hdpi/productDetails/enshrine1.png" id="enshrine"/>
 							</a>
 							<a href="####">
 								<img src="../../img/drawable-hdpi/productDetails/share.png" />
@@ -50,10 +50,14 @@
 						</div>
 					</div>
 				</div>
-				<div style="height: 82px;"></div>
+				<div id="board"></div>
 				<div class="det-wap-row">
 					<div class="dwr-timg-box">
-						<div class="dwr-timg-list">
+						<div id="unnamed1"></div>
+						<div class="dwr-timg-list" id="dtlist">
+							<div class="dwr-timg-item">
+								<img src="../../img/drawable-hdpi/16-jp.png" />
+							</div>
 							<div class="dwr-timg-item">
 								<img src="../../img/drawable-hdpi/16-jp.png" />
 							</div>
@@ -64,8 +68,9 @@
 								<img src="../../img/drawable-hdpi/16-jp.png" />
 							</div>
 						</div>
+						<div id="unnamed2"></div>
 						<div class="dwr-timg-sub">
-							<label class="lab-bg sub-loca">当地游&nbsp;某地出发</label><label class="lab sub-nub"><img src="../../img/drawable-hdpi/productDetails/dimg.png"/>1/15</label>
+							<label class="lab-bg sub-loca">当地游&nbsp;某地出发</label><label class="lab sub-nub"><img src="../../img/drawable-hdpi/productDetails/dimg.png"/><label id="index">1</label>/<label id="sum">15</label></label>
 						</div>
 					</div>
 					<div class="dwr-content">
@@ -97,8 +102,8 @@
 					</div>
 					<div class="dwr-trip">
 						<div class="trip-site">
-							<label class="site-start">天堂出发</label>
-							<label class="site-irc"><img src="../../img/drawable-hdpi/productDetails/qhcfd.png"/>&nbsp;切换出发地</label>
+							<label class="site-start" id="start">天堂出发</label>
+							<label class="site-irc" id="sirc"><img src="../../img/drawable-hdpi/productDetails/qhcfd.png"/>&nbsp;切换出发地</label>
 						</div>
 						<div class="trip-date-list">
 							<div class="date-item">
@@ -125,21 +130,68 @@
 					<div class="dwc-nav-box">
 						<div class="dwc-nav-guide">
 							<div class="guide-item">
-								<label class="guide guide-event">行程介绍</label>
+								<a href="#route">
+									<label class="guide guide-event">行程介绍</label>
+								</a>	
 							</div>
 							<div class="guide-item">
-								<label class="guide">费用说明</label>
+								<a href="#cost">
+									<label class="guide">费用说明</label>
+								</a>	
 							</div>
 							<div class="guide-item">
-								<label class="guide">预订须知</label>
+								<a href="#reserve">
+									<label class="guide">预订须知</label>
+								</a>	
 							</div>
 						</div>
 						<div class="guide-line">
-							<div class="silde-line"></div>
+							<div class="silde-line" id="sdline"></div>
 						</div>
 					</div>
-					<div style="height: 500px;">
-						
+					<a id="route"></a>
+					<div class="travel-inroduce-wapper">
+						<div class="travel_introduce">
+							<div class="tri-tit">
+								<h4>行程介绍</h4>
+							</div>
+							<div class="tri-filler" style="height: 300px;">
+								第一天<br />
+								 早上从长沙指定的地点出发，车行时间6个半小时左右乘车抵达安徽天柱山后游览【天柱大峡谷】（天柱大峡谷景区是水体景观对外开放的新亮点，清泉飞泻，瀑布成群变化莫测 是名副其实的瀑布"大观园"）观览山野风光云霞流岚,尽情呼吸大自然清新空气。（大峡谷游览时间约3.5个小时）。
+							</div>
+						</div>
+						<a id="cost"></a>
+						<div class="travel_introduce">
+							<div class="tri-tit">
+								<h4>费用说明</h4>
+							</div>
+							<div class="tri-filler" style="height: 300px;">
+								【活动时间】：7月21号发首班<br />
+								【活动费用】：398元/人<br />
+								【费用包含】：全程往返旅游大巴、天柱山门票、天柱山大峡谷门票,一晚标准住宿,早餐,饮用水一瓶、师傅路桥费用、旅游意外险。<br />
+								【集合地点】：7:00在长沙火车站阿波罗广场前坪集合<br />
+								【费用不含】：天柱山景区往返交通车30元。（代步工具，必须）<br />
+								【报名要求】：参加活动的朋友提供身份证，真实姓名，手机号码，用于购买保险。<br />
+							</div>
+						</div>
+						<a id="reserve"></a>
+						<div class="travel_introduce">
+							<div class="tri-tit">
+								<h4>预订须知</h4>
+							</div>
+							<div class="tri-filler" style="height: 300px;">
+								温馨提示：<br />
+								1、山区天气变化无常，早晚温差大，注意增添衣物保暖。<br />
+								2、出行时，请务必携带身份证，入住酒店时需出示身份证登记。<br />
+								3、参游时请严格遵守规定时间，接送集合时间，熟记领队联系方式及车牌号。<br />
+								4、不参加的景点、餐、住宿则视为自动放弃，不退还相关费用。<br />
+								5、请您自备毛巾、牙刷、牙膏等洗漱用品。<br />
+								6、70岁以上老人需子女陪同。<br />
+								7、此行程线路为特价线路，行程中相关景点和酒店，用车等费用都已经打包优惠，游客如遇自身原因放弃，旅行社不退还相关费用。<br />
+								活动纪律：<br />
+								本次活动为自助游，全程无购物，无离队、无埋怨、无冒险、无挑战、积极参与、认识风险、团队互助、服从领队、爱护老幼。没有团队配合精神，不听从领队活动安排，不认可此行程安排的，谢绝参加。<br />
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="more-tour">
@@ -216,6 +268,71 @@
 						</div>	
 				</div>
 				<div style="height: 100px;"></div>
+				<div class="det-fiexd-locat" id="defed" style="display: none;">
+					<div id="shadow"></div>
+					<div class="fiexd-locat-wapper" id="locat">
+						<div class="locat-list-tit">
+							<h4>请选择出发地</h4>
+						</div>
+						<div class="locat-list-box">
+							<ul>
+								<li class="locat-item">
+									<label class="lab dim-loca">小山沟</label><br />
+									<label class="lab dim-pice">¥2419</label>
+								</li>
+								<li class="locat-item">
+									<label class="lab dim-loca">小水沟</label><br />
+									<label class="lab dim-pice">¥2419</label>
+								</li>
+								<li class="locat-item">
+									<label class="lab dim-loca">小河沟</label><br />
+									<label class="lab dim-pice">¥2419</label>
+								</li>
+								<li class="locat-item">
+									<label class="lab dim-loca">小山沟</label><br />
+									<label class="lab dim-pice">¥2419</label>
+								</li>
+								<li class="locat-item">
+									<label class="lab dim-loca">小山沟</label><br />
+									<label class="lab dim-pice">¥2419</label>
+								</li>
+								<li class="locat-item">
+									<label class="lab dim-loca">小山沟</label><br />
+									<label class="lab dim-pice">¥2419</label>
+								</li>
+								<li class="locat-item">
+									<label class="lab dim-loca">小山沟</label><br />
+									<label class="lab dim-pice">¥2419</label>
+								</li>
+								<li class="locat-item">
+									<label class="lab dim-loca">小山沟</label><br />
+									<label class="lab dim-pice">¥2419</label>
+								</li>
+								<li class="locat-item">
+									<label class="lab dim-loca">小山沟</label><br />
+									<label class="lab dim-pice">¥2419</label>
+								</li>
+								<li class="locat-item">
+									<label class="lab dim-loca">小山沟</label><br />
+									<label class="lab dim-pice">¥2419</label>
+								</li>
+								<li class="locat-item">
+									<label class="lab dim-loca">小山沟</label><br />
+									<label class="lab dim-pice">¥2419</label>
+								</li>
+								<li class="locat-item">
+									<label class="lab dim-loca">小山沟</label><br />
+									<label class="lab dim-pice">¥2419</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="det-abs-examine" id="da-examine">
+					<div class="examine-box">
+						<label class="lab examine" onclick="look()">查看全部须知</label>
+					</div>
+				</div>
 				<div class="det-fiexd-floor">
 					<div class="dff-consider-box">
 						<div class="consider-item">
@@ -243,5 +360,7 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="../../js/model.js" ></script>
+		<script type="text/javascript" src="../../js/productDetails/index.js" ></script>
 	</body>
 </html>

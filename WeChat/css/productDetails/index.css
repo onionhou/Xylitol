@@ -1,5 +1,10 @@
 img{width: auto;height: auto;max-height: 100%;max-width: 100%;border: 0px;}
+h4{margin: 0px;}
+
+.bg-shut{}
+
 .details{background: #EEEEEE;}
+.details-wapper{position: relative;overflow: hidden;}
 .det-fiexd-top{position: fixed;width: 100%;z-index: 998;}
 
 .top-adv{float: left;width:100%;background: #4A4A54;}
@@ -24,8 +29,10 @@ img{width: auto;height: auto;max-height: 100%;max-width: 100%;border: 0px;}
 
 .det-wap-row{background: white; margin-bottom: 10px;}
 .dwr-timg-box{position: relative;height: 150px;overflow: hidden;}
-.dwr-timg-list{position: absolute;}
-.dwr-timg-item{float: left;}
+.dwr-timg-list{position: absolute;top: 0px;left: 0px;width: 100%;transform: translate3d(0px,0px,0px);transition-duration: 300ms;}
+.dwr-timg-item{float: left; }
+#unnamed1{position: absolute;left: 0px;width:0px;height: 150px;border-radius:0px 100% 100% 0px;transition: width 300ms;  background: white;opacity: 0.6;z-index: 111;}
+#unnamed2{position: absolute;right: 0px;width:0px;height: 150px;border-radius:100% 0 0 100%;transition: width 300ms;  background: white;opacity: 0.6;z-index: 111;}
 
 .dwr-timg-sub{position: absolute;width: 100%; left: 0px;bottom: 0px;}
 .sub-loca{background: #292B38;font-size: 10.8px;border-radius: 0px 5px 5px 0px;}
@@ -60,13 +67,14 @@ img{width: auto;height: auto;max-height: 100%;max-width: 100%;border: 0px;}
 .more-date{height: 34px;line-height: 34px;color: #313136;}
 .more-date i{font-size: 15px;}
 
-.dwc-nav-guide{background: white;text-align: center;border-bottom: 1px solid #F0F0F0;}
+.dwc-nav-box{height: 41px;}
+.dwc-nav-guide{width: 100%;float: left; background: white;text-align: center;border-bottom: 1px solid #F0F0F0;}
 .guide-item{float: left;width: 33.3%;padding: 10px 0px; font-size: 15px;}
 .guide{color: #636363;}
 .guide-event{color: #FD8100;}
 
-.guide-line{float: left; width: 100%;border-bottom: 1px solid #F0F0F0;}
-.silde-line{width: 33.3%;border-bottom: 1px solid #FD8100;}
+.guide-line{float: left; width: 100%;border-bottom: 1px solid #F0F0F0;margin-bottom: 10px;}
+.silde-line{width: 33.3%;border-bottom: 1px solid #FD8100;transform: translate3d(0px,0px,0px);transition-duration: 500ms;}
 
 .det-wap-content{background: white;margin-bottom: 10px;}
 
@@ -78,7 +86,7 @@ img{width: auto;height: auto;max-height: 100%;max-width: 100%;border: 0px;}
 .sppct-term{position: relative; float: left; width: 45%; border: 1px solid #F3F3F3;margin: 0px 2%;} 
 .prefs{width: 95%;}
 .sppct-term-details p{font-size: 16px;color: #46464B;}
-.pp{padding: 0px 4%;}
+.pp{padding: 0px}
 .pp-pice{line-height: 30px;}
 .std-pice{font-size: 14px; color: #F74D5F;font-weight: bold;}
 .lab-degree{display: inline-block;float: right; font-size: 12px; color: #939393;padding: 0px;}
@@ -95,3 +103,23 @@ img{width: auto;height: auto;max-height: 100%;max-width: 100%;border: 0px;}
 
 .dff-buy-box{float: left;width: 46%;height: 53;text-align: center;padding:6px 2%;}
 .buy{display: block;position: relative;margin: 0 auto;padding: 10px; background: #FF8402;color: white;font-size: 15px;border-radius: 5px;}
+
+/*旅游 行程*/
+.travel-inroduce-wapper{position: relative;padding: 20px;}
+.travel_introduce{padding: 10px;margin-bottom: 10px; border: 1px solid #D8D8D8;box-shadow: 1px 1px 4px #D8D8D8;}
+.tri-tit h4{font-size: 15px;font-weight: 400;text-align: center;margin: 10px 0px;}
+.tri-filler{text-align: left;}
+
+/*切换出发地*/
+.det-fiexd-locat{position: fixed;width: 100%;bottom: 0px;z-index: 999;}
+.fiexd-locat-wapper{background: white;width: 100%;height: 260px;}
+.locat-list-tit{padding:15px 0px;text-align: center;}
+.locat-list-tit h4{font-size: 14px;font-weight: 400;}
+#shadow{background: black;opacity: 0.2;}
+.locat-list-box{height: 210px;width: auto;}
+.locat-list-box ul li{float: left; width: 30%;margin-left: 2.2%;padding: 5px 0px; margin-bottom: 2.2%; border: 1px solid #F2F2F2;text-align: center;}
+
+/*查看全部须知*/
+.det-abs-examine{position: absolute;bottom: 0px;height: 100px;width: 100%;background: white;opacity: 0.8;}
+.examine-box{width: 100%; padding: 10px;text-align: center;}
+.examine{padding: 0px 20px;border: 1px solid #FF8402;border-radius: 10px;color: #FF8402;}

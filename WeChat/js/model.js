@@ -203,35 +203,6 @@ function sliderShow(){
 }
 
 
-function navbar(){
-	var gui=$className("guide");
-	var spc=$className("slipper-content");
-	for(var i=0;i<gui.length;i++){
-		(function(i){
-			gui[i].onclick=function(){
-				for(var j=0;j<gui.length;j++){
-						gui[j].className="guide";
-						spc[j].style.display="none"
-					}
-				gui[i].className="guide guide-event";
-				//横线动画
-				animaline(i);
-				//内容切换
-				cutdiv(i);
-			}
-		})(i);
-	}
-	//横线动画
-	function animaline(i){
-		var sbl=$id("sbline");
-		var sbw=sbl.offsetWidth;
-		sbl.style.transform="translate3d("+i*sbw+"px,0px,0px)"
-	}
-	function cutdiv(i){
-		spc[i].style.display="block";
-	}
-}
-navbar();
 
 function setH(){
 	var bak=$className("black");
