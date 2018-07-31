@@ -11,7 +11,7 @@
 	<body id="body" class="bg-shut">
 		<div class="details" id="details">
 			<div class="details-wapper" id="detailswp">
-				<div class="det-fiexd-top">
+				<div class="det-fiexd-top" id="fiexdTop">
 					<div class="top-adv" id="topadv" style="">
 						<div class="top-adv-attention" >
 							<div class="logo">
@@ -126,21 +126,21 @@
 						</div>
 					</div>
 				</div>
-				<div class="det-wap-content">
+				<div class="det-wap-content" id="dwcont">
 					<div class="dwc-nav-box">
 						<div class="dwc-nav-guide">
-							<div class="guide-item">
-								<a href="#route">
+							<div class="guide-item" data-to="tour">
+								<a href="javascript:void(0)">
 									<label class="guide guide-event">行程介绍</label>
 								</a>	
 							</div>
-							<div class="guide-item">
-								<a href="#cost">
+							<div class="guide-item" data-to="cost">
+								<a href="javascript:void(0)">
 									<label class="guide">费用说明</label>
 								</a>	
 							</div>
-							<div class="guide-item">
-								<a href="#reserve">
+							<div class="guide-item" data-to="reserve">
+								<a href="javascript:void(0)">
 									<label class="guide">预订须知</label>
 								</a>	
 							</div>
@@ -149,9 +149,8 @@
 							<div class="silde-line" id="sdline"></div>
 						</div>
 					</div>
-					<a id="route"></a>
-					<div class="travel-inroduce-wapper">
-						<div class="travel_introduce">
+					<div class="travel-inroduce-wapper" id="travel">
+						<div class="travel_introduce" id="tour">
 							<div class="tri-tit">
 								<h4>行程介绍</h4>
 							</div>
@@ -160,8 +159,7 @@
 								 早上从长沙指定的地点出发，车行时间6个半小时左右乘车抵达安徽天柱山后游览【天柱大峡谷】（天柱大峡谷景区是水体景观对外开放的新亮点，清泉飞泻，瀑布成群变化莫测 是名副其实的瀑布"大观园"）观览山野风光云霞流岚,尽情呼吸大自然清新空气。（大峡谷游览时间约3.5个小时）。
 							</div>
 						</div>
-						<a id="cost"></a>
-						<div class="travel_introduce">
+						<div class="travel_introduce" id="cost">
 							<div class="tri-tit">
 								<h4>费用说明</h4>
 							</div>
@@ -174,8 +172,7 @@
 								【报名要求】：参加活动的朋友提供身份证，真实姓名，手机号码，用于购买保险。<br />
 							</div>
 						</div>
-						<a id="reserve"></a>
-						<div class="travel_introduce">
+						<div class="travel_introduce" id="reserve">
 							<div class="tri-tit">
 								<h4>预订须知</h4>
 							</div>
@@ -271,12 +268,16 @@
 				<div class="det-fiexd-locat" id="defed" style="display: none;">
 					<div id="shadow"></div>
 					<div class="fiexd-locat-wapper" id="locat">
+						
 						<div class="locat-list-tit">
 							<h4>请选择出发地</h4>
+							<div class="locat-close" id="locaClose">
+								<img src="../../img/drawable-hdpi/productDetails/close.png" />
+							</div>
 						</div>
 						<div class="locat-list-box">
 							<ul>
-								<li class="locat-item">
+								<li class="locat-item locat-active">
 									<label class="lab dim-loca">小山沟</label><br />
 									<label class="lab dim-pice">¥2419</label>
 								</li>

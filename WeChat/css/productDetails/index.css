@@ -59,7 +59,7 @@ h4{margin: 0px;}
 .site-irc img{width: 10%;}
 
 .trip-date-list{height: 56px; width: 100%; padding: 10px;text-align: center;}
-.date-item{float: left;width:22%;padding: 10px 0px;margin-left: 5px; border: 1px solid #EAEAEA;font-size: 13px;}
+.date-item{float: left;width:22%;padding: 10px 0px;margin-right: 5px; border: 1px solid #EAEAEA;font-size: 13px;}
 .date-item a{display: inline-block;}
 .dim-time-default{color: #959595;}
 .dim-time{ color: #171717;font-weight: 500;}
@@ -113,11 +113,14 @@ h4{margin: 0px;}
 /*切换出发地*/
 .det-fiexd-locat{position: fixed;width: 100%;bottom: 0px;z-index: 999;}
 .fiexd-locat-wapper{background: white;width: 100%;height: 260px;}
-.locat-list-tit{padding:15px 0px;text-align: center;}
+.locat-list-tit{position: relative; padding:15px 0px;text-align: center;}
 .locat-list-tit h4{font-size: 14px;font-weight: 400;}
 #shadow{background: black;opacity: 0.2;}
 .locat-list-box{height: 210px;width: auto;}
 .locat-list-box ul li{float: left; width: 30%;margin-left: 2.2%;padding: 5px 0px; margin-bottom: 2.2%; border: 1px solid #F2F2F2;text-align: center;}
+.locat-active{background: deepskyblue;color: white;}
+.locat-close{position: absolute;top: 4px;right: 4px;}
+
 
 /*查看全部须知*/
 .det-abs-examine{position: absolute;bottom: 0px;height: 100px;width: 100%;background: white;opacity: 0.8;}

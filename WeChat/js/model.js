@@ -202,6 +202,35 @@ function sliderShow(){
 	}
 }
 
+/**
+ * div底部 横线 滑动
+ */
+function sildeLine(classNameDefault,classNameActive,lineID)
+{
+console.log()
+	var cnd=$className(classNameDefault+"");
+	console.log(cnd[0])
+	for(var i=0;i<cnd.length;i++){
+		(function(i){
+			cnd[i].onclick=function(){
+			console.log(cnd[i])
+				for(var j=0;j<cnd.length;j++){
+						cnd[j].className=classNameDefault;
+					}
+				
+				cnd[i].className=classNameActive;
+				//横线动画
+				animaline(i,lineID);
+			}
+		})(i);
+	}
+	//横线动画
+	function animaline(i,lineID){
+		var line=$id(lineID);
+		var lineW=line.offsetWidth;
+		line.style.transform="translate3d("+i*lineW+"px,0px,0px)"
+	}
+}
 
 
 function setH(){

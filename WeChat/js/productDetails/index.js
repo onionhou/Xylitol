@@ -4,6 +4,7 @@ window.onload = function()
 	gesture();
 	place();
 	tourbar();
+	JumpAnchor();
 }
 
 
@@ -100,8 +101,11 @@ function gesture()
 		
 	}
 }
-
+/**
+ * 定位
+ */
 function place(){
+	var index=0;
 	var loca=$className("locat-item");
 	$id("sirc").onclick=function(){
 		$id("defed").style.display="block";
@@ -115,8 +119,16 @@ function place(){
 				$id("start").innerText=$className("dim-loca")[i].innerText;
 				$id("body").style.position="relative";
 				$id("defed").style.display="none";
+				loca[index].className="locat-item";
+				loca[i].className="locat-item locat-active";
+				index=i;
 			}
 		})(i)
+	}
+	
+	$id("locaClose").onclick=function()
+	{
+		$id("defed").style.display="none";
 	}
 }
 
@@ -163,3 +175,33 @@ function look()
 	$id("da-examine").style.display="none";
 	$id("detailswp").style.height="auto";
 }
+
+/*跳转锚点*/
+function JumpAnchor()
+{
+	var gim=$className("guide-item");
+	for(var i=0;i<gim.length;i++)
+	{
+		(function(i){
+			gim[i].onclick=function()
+			{
+				var data=gim[i].getAttribute("data-to");
+				var topH=$id("fiexdTop").offsetHeight;
+			     console.log(data)	
+			    switch(data)
+			    {
+			     case "tour": document.body.scrollTop = document.documentElement.scrollTop = $id("travel").offsetTop+$id("tour").offsetTop-topH;
+			     				console.log(aspectRatio.scrollTop())
+			     break;
+			     case "cost": document.body.scrollTop = document.documentElement.scrollTop = $id("travel").offsetTop+$id("cost").offsetTop-topH;
+			     break;
+			     case "reserve": document.body.scrollTop = document.documentElement.scrollTop = $id("travel").offsetTop+$id("reserve").offsetTop-topH;
+			     break;
+			     default:
+			     break;
+			    }
+			}
+		})(i)
+	}
+}
+
