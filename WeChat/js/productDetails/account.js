@@ -5,5 +5,5 @@ window.onload=function()
 
 function setAccountSize()
 {
-	$id("act").style.minHeight=aspectRatio.snHeight()+"px";
+	$id("act").style.minHeight=aspectRatio.avHeight()+"px";
 }
