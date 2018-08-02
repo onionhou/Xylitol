@@ -24,9 +24,20 @@ for(var i=0;i<money.length;i++){
 	})(i)
 }
 
+
+var val="";
+$id("other").oninput=function()
+{
+	var rel= /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/;
+	if(!rel.test(this.value))
+	{
+		console.log("aaa")
+		this.value=val;
+	}
+	val=this.value;
+}
 $id("other").onblur=function()
 {
 	console.log("sss")
-	console.log(this)
-	this.innerText=this.value+"元";
+	this.value=this.value+"元";
 }
