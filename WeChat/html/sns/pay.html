@@ -27,7 +27,9 @@
 						<div class="money" style="margin-right: 0px;">100元</div>
 						<div class="money">200元</div>
 						<div class="money">300元</div>
-						<div class="money" style="margin-right: 0px;">其它金额</div>
+						<div class="money other-money">
+							<input type="text" id="other" placeholder="其它金额"/>
+						</div>
 						<div class="welfare">
 							<span>活动：充值满<label class="digit">1000</label>元，立即送<label class="digit">88.88</label>元</span>
 						</div>
@@ -47,11 +49,13 @@
 							<img src="../../img/drawable-hdpi/account/yes.png" class="choice"/>
 						</div>
 					</div>
-					<div>
-						<button type="button">充值</button>
+					<div class="pmw-pay">
+						<button type="button" class="bttn-default bttn-pay">充值</button>
 					</div>
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="../../js/model.js" ></script>
+		<script type="text/javascript" src="../../js/sns/pay.js" ></script>
 	</body>
 </html>
