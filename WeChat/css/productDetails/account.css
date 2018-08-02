@@ -1,8 +1,9 @@
-body{font-size: 12px;}
+body{font-size: 12px;height: 100%;}
 
 .account{width: 100%;background: #EEEEEE;}
 .account-wapper{padding: 10px 10px 0px 10px;}
-.account-bar{background: white;margin-bottom: 10px;}
+.account-bar{background: white;margin-bottom: 10px;border-radius: 5px; overflow: hidden;}
+.act-site-top{margin-bottom: 10px;}
 .act-site-bar{position: relative; padding:10px;color:#BCBCBC;}
 .lab-address{display: inline-block;width: 50%;color: #676767;}
 .asb-locat label{margin-right: 2%;}
