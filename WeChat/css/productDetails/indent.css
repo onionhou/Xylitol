@@ -1,0 +1,75 @@
+
+.indent{width: 100%;background: #EEEEEE;}
+.indent-main-wapper{padding: 10px 10px 100px 10px;}
+.indent-tour-product{padding: 10px;background: white;border-radius: 5px;margin-bottom: 10px;}
+
+.itp-title{border-bottom: 1px solid #F7F6FA;padding-bottom: 10px;}
+.itp-title h4{margin: 0px; margin-bottom: 5px;font-size: 15px;}
+.itp-title label{-webkit-text-size-adjust: none;}
+
+.itp-subtitle{display: inline-block; font-size: 13px;font-weight: 500;margin: 10px 0px;color: #1A1A1A;}
+.itp-date-wapper{height: 56px; width: 100%;text-align: center;}
+.date-item{float: left;width:22%;padding: 5px 0px;margin-right: 3%; border: 1px solid #EAEAEA;font-size: 12px;}
+.date-item a{display: inline-block;}
+.more-date{margin-right: 0px;}
+.dim-time-default{color: #959595;}
+.dim-time{ color: #171717;font-weight: 500;}
+.dim-pice{color: #FE8404;}
+.more-date{height: 32px;line-height: 32px;color: #313136;}
+.more-date i{font-size: 15px;}
+
+.itp-amount-wapper{width: 100%;}
+.amount-box{float: right;width: 40%;text-align: center;padding: 5px 0px;}
+.amt{display: inline-block; float: left;padding: 5px 8%; border: 1px solid #EBEBEB;}
+.amt-minus{border-radius: 50% 0px 0px 50%;color: #C2C2C2;}
+.amt-numb{padding: 5px 12%;}
+.amt-plus{border-radius: 0px 50% 50% 0px;color: #FF8402;}
+
+.indent-man-mess{padding: 10px;background: white;border-radius: 5px;margin-bottom: 10px;}
+.table{width: 100%;text-align: left;}
+.table tbody td{font-size: 13px;}
+.table input{border: 0px;}
+.table-th-row1{width: 25%;}
+.table-th-row2{width: 50%}
+.table-th-row3{width: 25%;text-align: right;}
+.table-th-row3 img{width: 20%;}
+#td-send{text-align: center;}
+#send{background: white;border: 0px;padding: 5px 0px;}
+.inp-text{width: 100%;}
+
+.ipt-leave-word{padding: 10px;background: white;border-radius: 5px;margin-bottom: 10px;}
+.leave-lab{display: block;font-size: 13px;float: left;}
+.leave-word{width: 80%;padding-top: 2px; border: 0px;font-size: 13px;line-height: 20px;resize: none;}
+.leave-word:focus{outline: none;}
+
+.next-step-wapper{position: relative;width: 100%; background: white;}
+.table tbody tr td{border-bottom: 1px solid #F0EFF7;}
+.ns{float: left;width: 50%;padding: 4px 0px;}
+.lab-pay{margin-left: 20px;}
+.money{font-size: 17px; color: red;}
+.ns-money{padding:12px 0px}
+.ns-btn{text-align: center;}
+.ns-btn a{display: inline-block; width: 95%;padding: 10px 0px; background: #FF8402;border-radius: 5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
