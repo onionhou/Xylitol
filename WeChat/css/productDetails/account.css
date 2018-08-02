@@ -1,7 +1,7 @@
 body{font-size: 12px;}
 
-.account{position: relative; width: 100%;}
-.account-wapper{padding: 10px 10px 0px 10px;background: #EEEEEE;}
+.account{width: 100%;background: #EEEEEE;}
+.account-wapper{padding: 10px 10px 0px 10px;}
 .account-bar{background: white;margin-bottom: 10px;}
 .act-site-bar{position: relative; padding:10px;color:#BCBCBC;}
 .lab-address{display: inline-block;width: 50%;color: #676767;}
@@ -21,7 +21,7 @@ body{font-size: 12px;}
 	vertical-align: middle;
 }
 
-.next-step-wapper{position: absolute;bottom: 0px; float: left;background: white; width: 100%;}
+.next-step-wapper{position: absolute;bottom: 1px; float: left;background: white; width: 100%;}
 .ns{float: left;width: 50%;padding: 4px 0px;}
 .lab-pay{margin-left: 20px;}
 .money{font-size: 17px; color: red;}
