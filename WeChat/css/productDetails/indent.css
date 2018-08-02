@@ -40,7 +40,7 @@
 
 .ipt-leave-word{padding: 10px;background: white;border-radius: 5px;margin-bottom: 10px;}
 .leave-lab{display: block;font-size: 13px;float: left;}
-.leave-word{width: 80%;padding-top: 2px; border: 0px;font-size: 13px;line-height: 20px;resize: none;}
+.leave-word{width: 80%;border: 0px;font-size: 13px;line-height: 20px;resize: none;}
 .leave-word:focus{outline: none;}
 
 .next-step-wapper{position: relative;width: 100%;}
