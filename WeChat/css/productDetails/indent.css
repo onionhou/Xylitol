@@ -1,5 +1,6 @@
+#body{height: 100%;overflow-y: hidden;background: #EEEEEE;}
 
-.indent{width: 100%;background: #EEEEEE;}
+.indent{width: 100%;}
 .indent-main-wapper{padding: 10px 10px 50px 10px;}
 .indent-tour-product{padding: 10px;background: white;border-radius: 5px;margin-bottom: 10px;}
 
@@ -43,7 +44,7 @@
 .leave-word{width: 80%;border: 0px;font-size: 13px;line-height: 20px;resize: none;}
 .leave-word:focus{outline: none;}
 
-.next-step-wapper{position: relative;float: left;background: white; width: 100%;}
+.next-step-wapper{position: absolute;bottom: 1px; float: left;background: white; width: 100%;}
 .ns{float: left;width: 50%;padding: 4px 0px;}
 .lab-pay{margin-left: 20px;}
 .money{font-size: 17px; color: red;}
