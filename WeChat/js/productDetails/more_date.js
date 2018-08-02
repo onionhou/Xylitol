@@ -19,8 +19,9 @@ function setDateHeight()
 
 function calendarWratch()
 {	
-	var calendar=$id("tbody");
+	var calendar=$className("tbody");
 	var monm=$className("month-item");
+	var cadate=$className("calendar-date");
 	var date=new Date(); //获取当前时间
 	var year=date.getFullYear();//年份
 	var month=date.getMonth();//月份
@@ -54,7 +55,7 @@ function calendarWratch()
 	
 	console.log(getCountWeek(month));
 	console.log(getCountDays(month));
-	function showCalendar(_month,_time)
+	function showCalendar(numb,_month,_time)
 	{	
 		var showStr="",
 			_className="",
@@ -83,7 +84,7 @@ function calendarWratch()
 				_className="day_optional";
 				if(msec===_time[j][0] && flag)
 				{
-					showStr+="<td class="+_className+"><a href='javascript:void(0)'>"+i+"<br /><lable class='day_cost'>"+_time[j][1]+"</lable></a></td>";
+					showStr+="<td class="+_className+" data-to="+_month+"><a href='javascript:void(0)' onclick='optionDate(this)'>"+i+"<br /><lable class='day_cost'>"+_time[j][1]+"</lable></a></td>";
 					flag=false;
 				}
 			}
@@ -119,17 +120,19 @@ function calendarWratch()
 		}
 		
 		showStr+="</tr>";
-		calendar.innerHTML=showStr;
+		calendar[numb].innerHTML=showStr;
 	}
 	
-	showCalendar(month,time);
-	
+	var index=0;
 	for(var j=0;j<monm.length;j++){
-	
+		showCalendar(j,month+j,time);
 		(function(j){
 			monm[j].onclick=function()
 			{
-				showCalendar(month+j,time);
+				cadate[index].style.display="none";
+				cadate[j].style.display="block";
+				index=j;
+				
 				var week=$className("week");
 				for(var i=0;i<week.length;i++)
 				{
@@ -139,4 +142,21 @@ function calendarWratch()
 		
 	}
 	
+}
+
+var m,d,p;
+
+function optionDate(date)
+{
+	for(var i=0;i<$className("day_optional").length;i++)
+	{
+		$className("day_optional")[i].className="day_optional";
+	}
+	
+	date.parentNode.className="day_optional pitch-on";
+	m=date.parentNode.getAttribute("data-to");
+	d=date.innerText;
+	p=date.children[0].innerText;
+	
+	console.log(m,d,p)
 }
