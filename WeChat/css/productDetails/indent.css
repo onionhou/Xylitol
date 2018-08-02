@@ -29,6 +29,7 @@
 .table{width: 100%;text-align: left;}
 .table tbody td{font-size: 13px;}
 .table input{border: 0px;}
+.table tbody tr td{border-bottom: 1px solid #F0EFF7;}
 .table-th-row1{width: 25%;}
 .table-th-row2{width: 50%}
 .table-th-row3{width: 25%;text-align: right;}
@@ -42,9 +43,8 @@
 .leave-word{width: 80%;padding-top: 2px; border: 0px;font-size: 13px;line-height: 20px;resize: none;}
 .leave-word:focus{outline: none;}
 
-.next-step-wapper{position: relative;width: 100%; background: white;}
-.table tbody tr td{border-bottom: 1px solid #F0EFF7;}
-.ns{float: left;width: 50%;padding: 4px 0px;}
+.next-step-wapper{position: relative;width: 100%;}
+.ns{float: left;width: 50%;padding: 4px 0px;background: white;}
 .lab-pay{margin-left: 20px;}
 .money{font-size: 17px; color: red;}
 .ns-money{padding:12px 0px}
