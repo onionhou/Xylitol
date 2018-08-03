@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />  
+		<title>我的订单</title>
+		<link rel="stylesheet" type="text/css" href="../../css/model.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sns/order.css"/>
+	</head>
+	<body>
+		<div class="order">
+			<div class="order-wapper">
+				<form class="form-order">
+					<div class="order-my-box">
+						<div class="omb-tite">
+							<label class="lab">待付款</label>
+						</div>
+						<div class="omb-middle">
+							<div class="omb-mdl-timg">
+								<img src="../../img/timg0.jpg"/>
+							</div>
+							<div class="omb-mdl-txt">
+								<p class="pp-twoline">张家界玻璃桥-天门山-芙蓉镇-凤凰九景汽车3日游</p>
+								<label class="lab">x1</label>
+							</div>
+						</div>
+						<div class="omb-base">
+							<p>合计：<label>¥1230.00</label></p>
+							<div class="omb-bas-sub">
+								<button type="button" class="bttn-default cancel">取消订单</button>
+								<button type="submit" class="bttn-default payment">立即支付</button>
+							</div>
+						</div>
+					</div>
+				</form>	
+				<form class="form-order">
+					<div class="order-my-box">
+						<div class="omb-tite">
+							<label class="lab">待付款</label>
+						</div>
+						<div class="omb-middle">
+							<div class="omb-mdl-timg">
+								<img src="../../img/timg0.jpg"/>
+							</div>
+							<div class="omb-mdl-txt">
+								<p class="pp-twoline">张家界玻璃桥-天门山-芙蓉镇-凤凰九景汽车3日游</p>
+								<label class="lab">x1</label>
+							</div>
+						</div>
+						<div class="omb-base">
+							<p>合计：<label>¥1230.00</label></p>
+							<div class="omb-bas-sub">
+								<button type="button" class="bttn-default cancel">取消订单</button>
+								<button type="submit" class="bttn-default payment">立即支付</button>
+							</div>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/model.js" ></script>
+		<script>
+			var cal=$className("cancel");
+			var fod=$className("form-order");
+			for(var i=0;i<cal.length;i++)
+			{
+				(function(i){
+					cal[i].onclick=function()
+					{
+						console.log(i)
+						fod[i].parentNode.removeChild(fod[i]);
+					}
+				})(i)
+			}
+		</script>
+	</body>
+</html>

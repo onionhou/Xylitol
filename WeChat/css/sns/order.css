@@ -1,0 +1,19 @@
+img{width: auto;height: auto;max-width: 100%;max-height: 100%;}		
+
+html{background: #EEEEEE;}	
+.order-wapper{width: 100%;padding-top: 10px; }
+.order-my-box{background: white;margin-bottom: 10px;}
+.omb-tite{padding: 10px; text-align: right;color: #FF8402;}
+
+.omb-middle{height: 61px; padding: 5px 10px;border-top: 1px solid #EDEDED;; border-bottom:1px solid #EDEDED;}
+.omb-mdl-timg{float: left; width: 20%;margin-right: 2%;}
+.omb-mdl-txt{float: left;width: 78%;  text-align: right;}
+.omb-mdl-txt p{text-align: left; font-size: 15px;color: #363639;}
+
+.omb-base{padding: 5px 10px;}
+.omb-base p{padding: 5px 0px; font-size: 12px;text-align: right;}
+.omb-base p label{font-size: 15px;color: #FE394F;}
+
+.omb-bas-sub{text-align: right;padding: 10px 0px;}
+.cancel{margin-right: 10px;border: 1px solid #BABABA;border-radius: 5px; background: white;}
+.payment{border: 0px; border-radius: 5px;background: #FF8402;color: white;}

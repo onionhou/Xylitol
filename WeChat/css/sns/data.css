@@ -1,0 +1,13 @@
+
+html{background: #EEEEEE;}
+.data{width: 100%;}
+.data-wapper{padding: 10px;}
+.bio-data-box{padding-left: 10px; background: white;border-radius: 5px;}
+.table{text-align: left;font-size: 15px;}
+.table tbody td,thead td{padding: 2px 0px; font-size: 15px;border-bottom: 1px solid #ECECF5;}
+.table thead td{padding: 2px 0px;}
+.table tbody td{padding: 10px 0px;}
+.table-icon{width: 50px;}
+.nickname{display: inline-block;width: 100%;height: auto; font-size: 17px;}
+.inpt-data{width: 80%;border: 0px;}
+.bttn-sure{width: 100%;padding:10px 0px;margin-top: 40px;border-radius: 5px; background: #FF8402;font-size:17px; color: white;}
