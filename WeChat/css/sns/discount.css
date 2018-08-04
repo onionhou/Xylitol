@@ -1,0 +1,15 @@
+html{min-height: 100%;background: #EEEEEE;}
+body{font-size: 12px;}
+
+.discount-wapper{max-width: 414px; margin: 0 auto;padding: 10px;}
+.discount-ticket{position: relative; height: 67px;padding: 5px; background: url(../../img/drawable-hdpi/discount/juxing.png);background-size: cover; border-radius: 5px;}
+.ticket-sum{float: left;width: 30%;height: 100%;margin-right: 10px; display: flex; text-align: center;border-right: 1px solid #E2E2E2;}
+.ticket-sum span{margin: auto;color: red;}
+.ticket-sum span label{font-size: 19px;}
+.ticket-off{position: relative; float: left;width: 50%;height: 100%;text-align: left;}
+.ticket-off b{font-size: 15px;}
+.ticket-off label{color: #7F7F7F;}
+.ticket-off small{position: absolute;display: block;bottom: 0px;color: #C1C1C1;}
+.ticket-get{position: absolute;right: 5px;bottom: 5px;}
+.ticket-get button{border: 0px; border-radius: 5px; background: #FF8402;color: white;}
+.slogan{position: absolute;width: 100px; top:0;left: 93%;transform: rotate(45deg);transform-origin: 0 0;font-size: 10.8px; color: white;}

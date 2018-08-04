@@ -9,5 +9,5 @@ html{background: #EEEEEE;}
 .table tbody td{padding: 10px 0px;}
 .table-icon{width: 50px;}
 .nickname{display: inline-block;width: 100%;height: auto; font-size: 17px;}
-.inpt-data{width: 80%;border: 0px;}
+.inpt-data{width: 80%;padding:5px 0px ; border: 0px;}
 .bttn-sure{width: 100%;padding:10px 0px;margin-top: 40px;border-radius: 5px; background: #FF8402;font-size:17px; color: white;}

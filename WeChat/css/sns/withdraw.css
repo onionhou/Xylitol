@@ -1,0 +1,33 @@
+html{background: #EEEEEE;height: 100%;}
+body{height: 100%;overflow: hidden;}
+.withdraw{position: relative; width: 100%;height: 100%;}
+.withdraw-wapper{padding: 10px;}
+.withdraw-wapper-box{background: white;}
+.wwb-top{padding: 10px;border-bottom: 1px solid #EEEEEE;}
+.wwb-app{display: block;width: 100%;}
+.wwb-wd{font-size: 15px;color: #313139;}
+.wwb-app{float: right;width: 50%;text-align: right;}
+.wwb-app span{margin-right: 20px;}
+.wwb-app span img{display: inline-block; vertical-align: middle;width: 20px;margin-right: 10px;}
+
+.wwb-middle{padding: 10px;border-bottom: 1px solid #EEEEEE;}
+.wwb-middle p{margin: 10px 0px;font-size: 13px;color: #8B8B8B;}
+.lab-all{margin-left: 10px;color: #FF8402;}
+
+.wwb-base{padding: 10px;font-size: 12px;color: #8B8B8B;}
+.wwb-numb{width: 80%; border:0px;font-size: 36px;font-weight: bold;}
+.wwb-numb:before{content: "¥" ;}
+
+.bttn-sure{width: 100%;padding:10px 0px;margin-top: 40px;border-radius: 5px; background: #FF8402;font-size:15px; color: white;}
+
+.draw-method-box{position: absolute;width:100%;bottom: 0px;background: white;}
+.act-bar-tit{padding:0px 10px;border-bottom: 1px solid #d3d3db;}
+
+.account-bar{padding-left: 20px;}
+.account-bar div:last-child{border-bottom: 0px;}
+.act-way-bar{padding: 10px 0px;border-bottom: 1px solid #d3d3db;}
+.pay-way{width: 8%; vertical-align: middle;margin-right: 5px;}
+.choice{display:none;float:right; width: 6%;margin-right: 10px;}
+.choice:after{content:'';width: 0;height: 100%;display: inline-block;vertical-align: middle;}
+
+.fiexd-bg{position: fixed;top: 0px; width: 100%;height: 100%;background: black;opacity: 0.4;}

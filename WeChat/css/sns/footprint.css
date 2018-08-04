@@ -1,0 +1,14 @@
+html{width: 100%;background: #EEEEEE;}
+img{width: auto;height: auto;max-width: 100%;max-height: 100%;}	
+.footprint-wapper{padding: 10px;}
+.foot-box{background: white;margin-bottom: 10px;border-radius: 5px;}
+.fwb-time{text-align: right;padding: 5px;border-bottom: 1px solid #E0E0E0;font-size:13px; color: #B8B8B8;}
+
+.fwb-main-link{display: block;padding: 10px 5px;height: 60px;}
+.fwb-main-timg{float: left;width: 20%;font-size: 0px;}
+.fwb-main-warm{position: relative;height: 100%;float: right;width: 75%;}
+
+.title{font-size: 17px;}
+.price{position: absolute;width:100%; bottom: 0px;}
+.lab-price{font-size: 17px;color: #FE2A43;}
+.lab-lely{display: block;float: right;padding: 4px 0px;}

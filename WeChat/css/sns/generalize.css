@@ -1,0 +1,16 @@
+html{width: 100%;height: 100%;overflow: hidden;background: #EEEEEE;}
+body{height: 100%;}
+img{width: auto;height: auto;max-width: 100%; max-height: 100%;}
+
+.generalize{height: 100%;}
+.generalize-wapper{width: 100%;height: 100%;}
+
+.gen-qr-code{height: 60%;}
+.qr-code-box{width: 50%;margin: 0 auto;position: relative;top: 50%;transform: translateY(-50%);}
+
+.gen-share{height: 40%;background: white;}
+.share-title{padding: 5px 0px;border-bottom: 1px solid #F8F8F8; font-size: 13px; color: #252525;text-align: center;}
+
+.share-way-list{padding: 10% 0px;}
+.share-way-item{display: block; float: left;width: 30%;margin-left: 3%; text-align: center;}
+.share-way-item img{width: 60%;}

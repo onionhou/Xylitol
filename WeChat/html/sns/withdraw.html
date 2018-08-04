@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />  
+		<title>余额提现</title>
+		<link rel="stylesheet" type="text/css" href="../../css/model.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/sns/withdraw.css"/>
+	</head>
+	<body>
+		<div class="withdraw">
+			<div class="withdraw-wapper">
+				<div class="withdraw-wapper-box">
+					<div class="wwb-top">
+						<a href="javascript:void(0)" onclick="method()" class="wwb-top-box">
+							<div class="wwb-app">
+								<span id="app"><img src="../../img/drawable-hdpi/account/wechat.png"/>微信</span>
+								<i class="fa fa-angle-right"></i>
+							</div>
+							<label class="wwb-wd">提现方式</label>
+						</a>
+					</div>
+					<div class="wwb-middle">
+						<label class="wwb-wd">提现金额</label>
+						<p class="pp">当前克提现金额：¥<label id="money">1590</label><label class="lab-all" id="wdall">全部提现</label></p>
+						¥<input type="number" class="wwb-numb" id="numb" value="" />
+					</div>
+					<div class="wwb-base">
+						额外扣除¥<label id="poundage">0.00</label>手续费 (费率0.1%)
+					</div>
+				</div>
+				<div>
+					<button type="submit" class="bttn-default bttn-sure">提现</button>
+				</div>
+			</div>
+			<div class="fiexd-bg" style="display: none;" id="fiexdBg"></div>
+			<div class="draw-method-box" style="display: none;" id="drawmd">
+				<div class="act-bar-tit">
+					<h4>选择支付方式</h4>
+				</div>
+				<div class="account-bar">
+					<div class="act-way-bar">
+						<span class="awb-pay"><img src="../../img/drawable-hdpi/account/zfb.png" class="pay-way"/>&nbsp;支付宝</span>
+						<img src="../../img/drawable-hdpi/account/yes.png" class="choice"/>
+					</div>
+					<div class="act-way-bar">
+						<span class="awb-pay"><img src="../../img/drawable-hdpi/account/wechat.png" class="pay-way"/>&nbsp;微信</span>
+						<img src="../../img/drawable-hdpi/account/yes.png" class="choice"/>
+					</div>
+					<div class="act-way-bar">
+						<span class="awb-pay"><img src="../../img/drawable-hdpi/account/yinl.jpg" class="pay-way"/>&nbsp;银联</span>
+						<img src="../../img/drawable-hdpi/account/yes.png" class="choice"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/model.js" ></script>
+		<script type="text/javascript" src="../../js/sns/withdraw.js" ></script>
+	</body>
+</html>
