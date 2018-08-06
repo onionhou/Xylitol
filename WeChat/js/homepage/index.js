@@ -7,7 +7,7 @@ window.onload = function()
 {
 	sliderTime();
 	sliderShow();
-	getOnLocation();
+	getLocation();
 } 
 
 function sliderTime(){
@@ -207,3 +207,48 @@ function navbar(){
 	}
 }
 navbar();
+
+
+function getLocation()
+{
+	var options={
+		enableHighAccuracy:true,
+		maximumAge:1000
+	}
+	
+	if(navigator.geolocation)
+	{
+		navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
+	}
+	else
+	{
+		alert("您的浏览器不支持地理定位")
+	}
+	
+	function onError(err)
+	{
+		switch (err.code){
+			case err.PERMISSION_DENIED:
+				alert("拒绝获取");
+				break;
+			case err.POSITION_UNAVAILABLE:
+				alert("位置信息不可用");
+				break;
+			case error.TIMEOUT:
+				alert("请求超时");
+				break;
+			case error.UNKNOWN_ERROR:
+				alert("位置错误");
+				break;	
+			default:
+				break;
+		}
+	}
+	
+	function onSuccess(position)
+	{
+		var latitde=position.coords.latitude;
+		var longitude=position.coords.longitude;
+		calert(latitde+"****"+longitude);
+	}
+}

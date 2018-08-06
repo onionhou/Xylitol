@@ -154,6 +154,8 @@ function getOnLocation()
 	        //纬度
 	        var latitude = position.coords.latitude;
 	         //坐标转换完之后的回调函数
+	         
+	         console.log("经度："+longitude+"纬度："+latitude)
 	    translateCallback = function (data){
 	      if(data.status === 0) {
 	        var marker = new BMap.Marker(data.points[0]);
@@ -165,6 +167,7 @@ function getOnLocation()
 	    }
 	
 	    setTimeout(function(){
+	    	console.log("callback")
 	        var convertor = new BMap.Convertor();
 	        var pointArr = [];
 	        pointArr.push(ggPoint);
