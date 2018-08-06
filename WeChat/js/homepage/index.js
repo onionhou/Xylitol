@@ -257,6 +257,8 @@ function getLocation()
 		map.centerAndZoom(point,12);
 		
 		var geolocation = new BMap.Geolocation();
+		// 开启SDK辅助定位
+		geolocation.enableSDKLocation();
 		geolocation.getCurrentPosition(function(r){
 			if(this.getStatus() == BMAP_STATUS_SUCCESS){
 				var mk = new BMap.Marker(r.point);
