@@ -252,22 +252,19 @@ function getLocation()
 		var latitde=position.coords.latitude;
 		var longitude=position.coords.longitude;
 		alert(latitde+"-----------"+longitude)
-		var amap=new BMap.Map("allmap");
-		var ggPoint=new BMap.Point(latitde,longitude);
-		amap.centerAndZoom(ggPoint,12);
+		var map = new BMap.Map("allmap");
+		var point = new BMap.Point(116.331398,39.897445);
+		map.centerAndZoom(point,12);
 		
-		var bmap = new BMap.GeoPosition();
-		bmap.getCurrentPosition(function(r)
-		{
-			if(this.getStatus() == BMAP_STATUS_SUCCESS)
-			{
+		var geolocation = new BMap.Geolocation();
+		geolocation.getCurrentPosition(function(r){
+			if(this.getStatus() == BMAP_STATUS_SUCCESS){
 				var mk = new BMap.Marker(r.point);
 				map.addOverlay(mk);
 				map.panTo(r.point);
 				alert('您的位置：'+r.point.lng+','+r.point.lat);
 			}
-			else 
-			{
+			else {
 				alert('failed'+this.getStatus());
 			}        
 		});
