@@ -112,6 +112,71 @@ function addLoadEvent(func) {
 }
 
 /**
+ * Location 定位
+ * <script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
+ */
+
+function getOnLocation()
+{
+	 var options={
+            enableHighAccuracy:true,//开启高精度
+            maximumAge:1000
+        }
+        if(navigator.geolocation){
+            //浏览器支持geolocation
+            navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
+        }else{
+            //浏览器不支持geolocation
+            errGoIndex('您的浏览器不支持地理位置定位');
+        }
+        //失败时
+	 function onError(error){
+	    status=true;
+	    switch(error.code){
+	        case error.PERMISSION_DENIED:
+	            errGoIndex("定位失败,用户拒绝请求地理定位");
+	            break;
+	        case error.POSITION_UNAVAILABLE:
+	            errGoIndex("定位失败,位置信息是不可用");
+	            break;
+	        case error.TIMEOUT:
+	            errGoIndex("定位失败,请求获取用户位置超时");
+	            break;
+	        case error.UNKNOWN_ERROR:
+	            errGoIndex("定位失败,定位系统失效");
+	            break;
+	    }
+	}
+	//2，成功时我们进行百度地图经纬度转换
+	function onSuccess(position){
+	 //经度
+	        var longitude = position.coords.longitude;
+	        //纬度
+	        var latitude = position.coords.latitude;
+	         //坐标转换完之后的回调函数
+	    translateCallback = function (data){
+	      if(data.status === 0) {
+	        var marker = new BMap.Marker(data.points[0]);
+	        bm.addOverlay(marker);
+	        var label = new BMap.Label("转换后的百度标注（正确）",{offset:new BMap.Size(20,-10)});
+	        marker.setLabel(label); //添加百度label
+	        bm.setCenter(data.points[0]);
+	      }
+	    }
+	
+	    setTimeout(function(){
+	        var convertor = new BMap.Convertor();
+	        var pointArr = [];
+	        pointArr.push(ggPoint);
+	        convertor.translate(pointArr, 3, 5, translateCallback)
+	    }, 1000);
+	}
+}
+
+
+
+
+/**
  * 轮播图
  */
 function sliderShow(){ 

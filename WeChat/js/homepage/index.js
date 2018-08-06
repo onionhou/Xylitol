@@ -3,9 +3,13 @@
  * lun bo tu
  */
 
-window.onload = sliderTime();
+window.onload = function()
+{
+	sliderTime();
+	sliderShow();
+	getOnLocation();
+} 
 
-sliderShow();
 function sliderTime(){
 	var index=0;
 	var wid=$id("slidebt").children[0].offsetWidth;
@@ -123,7 +127,7 @@ function setcompatibility(){
 		$className("cs-road-map")[i].style.height=as/9+"px";
 	}
 	for(var i=0;i<stmp.length;i++){
-		 var pers=stmp[i].parentNode.className;
+		 var pers=stmp[i].parentNode.parentNode.className;
 		if(pers=="sppct-term prefs"){
 			stmp[i].style.height=as/3.9+"px";
 			continue;
