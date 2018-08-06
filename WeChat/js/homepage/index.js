@@ -219,6 +219,7 @@ function getLocation()
 	if(navigator.geolocation)
 	{
 		navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
+		console.log("11")
 	}
 	else
 	{
