@@ -249,6 +249,6 @@ function getLocation()
 	{
 		var latitde=position.coords.latitude;
 		var longitude=position.coords.longitude;
-		calert(latitde+"****"+longitude);
+		alert(latitde+"****"+longitude);
 	}
 }
