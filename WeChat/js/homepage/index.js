@@ -247,9 +247,14 @@ function getLocation()
 	
 	function onSuccess(position)
 	{
+		alert('success');
 		var latitde=position.coords.latitude;
 		var longitude=position.coords.longitude;
+		
+		var amap=new BMap.Map("allmap");
 		var ggPoint=new BMap.Point(latitde,longitude);
+		amap.centerAndZoom(ggPoint,12);
+		
 		var bmap = new BMap.GeoPosition();
 		bmap.getCurrentPosition(function(r)
 		{
