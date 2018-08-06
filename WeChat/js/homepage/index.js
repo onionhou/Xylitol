@@ -248,10 +248,10 @@ function getLocation()
 	
 	function onSuccess(position)
 	{
-		alert('success');
+		alert('success'+position);
 		var latitde=position.coords.latitude;
 		var longitude=position.coords.longitude;
-		
+		alert(latitde+"-----------"+longitude)
 		var amap=new BMap.Map("allmap");
 		var ggPoint=new BMap.Point(latitde,longitude);
 		amap.centerAndZoom(ggPoint,12);
