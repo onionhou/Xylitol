@@ -257,6 +257,7 @@ function getLocation()
 		
 		var geolocation = new BMap.Geolocation();
 		geolocation.getCurrentPosition(point,function(r){
+			console.log("sss")
 			var city=r.addressComponents.city;
 			      alert(city);
 		});
