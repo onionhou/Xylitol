@@ -260,6 +260,5 @@ function getLocation()
 			var city=r.addressComponents.city;
 			      alert(city);
 		});
-		
 	}
 }
