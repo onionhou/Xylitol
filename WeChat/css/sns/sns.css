@@ -6,7 +6,7 @@ a{
 }
 .sns-cl-wapper{background: #EFEFF7;padding-bottom: 10px;}
 .vita-wapper{margin-bottom: 10px;}
-.vita-info-box{position: relative; width: 100%;height: 133px; background-image: url(../img/drawable-hdpi/my/bj.png);}
+.vita-info-box{position: relative; width: 100%;height: 133px; background-image: url(../../img/drawable-hdpi/my/bj.png);}
 
 .vita-show{width: 100%;height: 98%;text-align: center;padding-top: 2%;}
 .vs-via{width: 16%;height:60px; margin: 0 auto;border: 2px solid white; border-radius: 50%;overflow: hidden;}
