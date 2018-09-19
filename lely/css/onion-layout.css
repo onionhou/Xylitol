@@ -1,0 +1,14 @@
+*{font-family: '微软雅黑';font-size:12px;}
+.onion-layout-body{margin: 0px;padding: 0px;overflow: hidden;}
+
+.onion-header{height: 60px;border-bottom: 1px solid #9EA4AD;background: #009688;}
+.onion-logo{position: absolute;top: 0px;left: 0px; height: 60px;width: 200px;background: #0DF5BF;color: white;font-size: 24px;text-align: center;line-height: 60px;}
+.layui-nav-left{position: absolute!important;left: 200px;top: 0px;background: #009688!important;}
+.layui-nav-right{position: absolute!important;right: 0px;top: 0px;background: #009688!important;}
+
+.onion-side{position: absolute;top: 60px;left: 0px;height: 100%;width: 200px;background: #2F4056;}
+.onion-side-scroll{width: 220px;height: 100%;overflow-y: auto;}
+.onion-side-scroll ul{height: 100px;}
+
+.onion-body{position: absolute;top:60px;bottom: 0px;left: 200px;right: 0px;width: auto; background: #DBDBDB;overflow-y: hidden;}
+.onion-body-wapper{padding-left: 20px;padding-right: 20px;}

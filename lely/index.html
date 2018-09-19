@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>layout 后台大布局 - Layui</title>
+  <link rel="stylesheet" href="layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="css/onion-layout.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body class="onion-layout-body">
+	<div class="onion-layout">
+		<div class="onion-header">
+			<div class="onion-logo">
+				乐龄e站
+			</div>
+			<ul class="layui-nav layui-nav-left" lay-filter="">
+				<li class="layui-nav-item"><a href="backstage/homepage/carousel.html">首页</a></li>
+				<li class="layui-nav-item"><a href="">商品</a></li>
+				<li class="layui-nav-item"><a href="backstage/member/mymember.html">会员</a></li>
+				<li class="layui-nav-item"><a href="">订单</a></li>
+			    <li class="layui-nav-item"><a href="">营销</a></li>
+				<li class="layui-nav-item"><a href="">财务</a></li>
+				<li class="layui-nav-item"><a href="">数据</a></li>
+				<li class="layui-nav-item"><a href="">页面</a></li>
+				<li class="layui-nav-item"><a href="">分销</a></li>
+				<li class="layui-nav-item"><a href="">设置</a></li>
+			</ul> 
+
+			<ul class="layui-nav layui-bg-molv layui-nav-right">
+		     	<li class="layui-nav-item">
+				    <a href="">乐龄e站</a>
+				    <dl class="layui-nav-child">
+				      <dd><a href="javascript:;">个人资料</a></dd>
+				      <dd><a href="javascript:;">退出登录</a></dd>
+				    </dl>
+			    </li>
+			</ul>
+		</div>
+
+		<div class="onion-side">
+			<div class="onion-side-scroll">
+				<ul class="layui-nav layui-nav-tree" lay-filter="test">
+				<!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+				  <li class="layui-nav-item layui-nav-itemed">
+				    <a href="javascript:;">商城首页</a>
+				    <dl class="layui-nav-child">
+				      <dd><a href="javascript:;">轮播图</a></dd>
+				      <dd><a href="javascript:;">热门目的地</a></dd>
+				      <dd><a href="javascript:;">商品推荐</a></dd>
+				    </dl>
+				  </li>
+				  <li class="layui-nav-item">
+				    <a href="javascript:;">商城管理</a>
+				    <dl class="layui-nav-child">
+				      <dd><a href="">公告管理</a></dd>
+				      <dd><a href="">配送方式</a></dd>
+				      <dd><a href="">评价管理</a></dd>
+				      <dd><a href="">退货地址管理</a></dd>
+				    </dl>
+				  </li>
+				  <li class="layui-nav-item">
+				  	<a href="javascript:;">用户管理</a>
+					<dl class="layui-nav-child">
+				      <dd><a href="">门店管理</a></dd>
+				      <dd><a href="">会员管理</a></dd>
+				    </dl>	
+				  </li>
+				  <li class="layui-nav-item"><a href="">大数据</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="onion-body">
+
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="layui/layui.js"></script>
+	<script type="text/javascript">
+		layui.use('element',function(){
+			var elem = layui.element;
+		})
+
+	</script>
+</body>
+</html>
