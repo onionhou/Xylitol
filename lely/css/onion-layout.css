@@ -1,4 +1,4 @@
-*{font-family: '微软雅黑';font-size:12px;}
+*{font-family: '微软雅黑';}
 .onion-layout-body{margin: 0px;padding: 0px;overflow: hidden;}
 
 .onion-header{height: 60px;border-bottom: 1px solid #9EA4AD;background: #009688;}
@@ -12,3 +12,6 @@
 
 .onion-body{position: absolute;top:60px;bottom: 0px;left: 200px;right: 0px;width: auto; background: #DBDBDB;overflow-y: hidden;}
 .onion-body-wapper{padding-left: 20px;padding-right: 20px;}
+.onion-body-header{padding: 20px;}
+
+.pull-left{display: inline-block;}
