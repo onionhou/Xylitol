@@ -47,15 +47,15 @@
 	            break;
 	    }
 	}
-		function onSuccess(position){
+	function onSuccess(position){
 		//获取经纬度
 		var longitude = position.coords.longitude;
-        //纬度
-        var latitude = position.coords.latitude;
-
-        var gps=gcj02_To_Bd09(longitude,latitude);
-        alert('经度:'+gps[0]+'纬度:'+gps[1]);
-        //百度地图
+		//纬度
+		var latitude = position.coords.latitude;
+		alert('经度:'+longitude+'纬度:'+latitude);
+		var gps=gcj02_To_Bd09(longitude,latitude);
+		alert('经度:'+gps[0]+'纬度:'+gps[1]);
+		//百度地图
 		var map = new BMap.Map("container");
 		var point = new BMap.Point(longitude, latitude);
 		map.centerAndZoom(point, 15);
@@ -78,14 +78,14 @@
 	}
 
 	var gcj02_To_Bd09=function (lat,lon) {
-        var x = lon, y = lat;
-        var z = Math.sqrt(x * x + y * y) + 0.00002 * Math.sin(y * x_pi);
-        var theta = Math.atan2(y, x) + 0.000003 * Math.cos(x * x_pi);
-        var tempLon = z * Math.cos(theta) + 0.0065;
-        var tempLat = z * Math.sin(theta) + 0.006;
-        var gps = [tempLat,tempLon];
-        return gps;
-    }
+		var x = lon, y = lat;
+		var z = Math.sqrt(x * x + y * y) + 0.00002 * Math.sin(y * x_pi);
+		var theta = Math.atan2(y, x) + 0.000003 * Math.cos(x * x_pi);
+		var tempLon = z * Math.cos(theta) + 0.0065;
+		var tempLat = z * Math.sin(theta) + 0.006;
+		var gps = [tempLat,tempLon];
+		return gps;
+	    }
 
 </script>
 </html>
