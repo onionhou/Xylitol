@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/model.css"/>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=DD5IjYVxKLTaUzm2UrTEGXT5HDVhwG8o"></script>
+</head>
+<style type="text/css">  
+    html{height:100%}    
+    body{height:100%;margin:0px;padding:0px}    
+    #container{height:100%}    
+</style> 
+<body>
+	<div id="container"></div> 
+</body>
+<script type="text/javascript">
+	var options={
+            enableHighAccuracy:true,//开启高精度
+            maximumAge:1000
+        }
+        if(navigator.geolocation){
+            //浏览器支持geolocation
+            navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
+        }else{
+            //浏览器不支持geolocation
+            errGoIndex('您的浏览器不支持地理位置定位');
+        }
+        //失败时
+	 function onError(error){
+	    status=true;
+	    switch(error.code){
+	        case error.PERMISSION_DENIED:
+	            errGoIndex("定位失败,用户拒绝请求地理定位");
+	            break;
+	        case error.POSITION_UNAVAILABLE:
+	            errGoIndex("定位失败,位置信息是不可用");
+	            break;
+	        case error.TIMEOUT:
+	            errGoIndex("定位失败,请求获取用户位置超时");
+	            break;
+	        case error.UNKNOWN_ERROR:
+	            errGoIndex("定位失败,定位系统失效");
+	            break;
+	    }
+	}
+	function onSuccess(position){
+		var map = new BMap.Map("container");
+		var point = new BMap.Point(116.404, 39.915);
+		map.centerAndZoom(point, 15);
+		window.setTimeout(function(){  
+		    map.panTo(new BMap.Point(116.409, 39.918));    
+		}, 2000);  
+	}
+
+</script>
+</html>
