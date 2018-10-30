@@ -63,8 +63,9 @@
         var pointArr = [];
         pointArr.push(point);
         convertor.translate(pointArr, 3, 5, translateCallback)
-	alert(translateCallback);
+	alert('translateCallback');
 	var translateCallback=function(data){
+		alert('translateCallback');
 		alert(data.status);
 		if(data.status===0){
 			var marker=new BMap.Marker(data.points[0]);
