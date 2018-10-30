@@ -14,7 +14,8 @@
     #container{height:100%}    
 </style> 
 <body>
-	<div id="container"></div> 
+	<div id="container"></div>
+	<div id="geocoder"></div>
 </body>
 <script type="text/javascript">
 	var options={
@@ -56,6 +57,19 @@
 		var map = new BMap.Map("container");
 		var point = new BMap.Point(longitude, latitude);
 		map.centerAndZoom(point, 15);
+		var marker = new BMap.Marker(point);        // 创建标注    
+		map.addOverlay(marker);
+
+		// 创建地理编码实例  
+		var myGeo = new BMap.Geocoder();      
+		// 根据坐标得到地址描述    
+		myGeo.getLocation(new BMap.Point(longitude, latitude), function(result){      
+		    if (result){      
+		    alert(result.address); 
+		    document.getElementById('geocoder').text(result.address);
+		    }      
+		});
+
 		window.setTimeout(function(){  
 		    //map.panTo(new BMap.Point(116.409, 39.918));    
 		}, 2000);  
