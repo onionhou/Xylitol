@@ -48,40 +48,45 @@
 	    }
 	}
 	function onSuccess(position){
-	alert('欢迎使用百度地图');
-	//获取经纬度
-	var longitude = position.coords.longitude;
+		//获取经纬度
+		var longitude = position.coords.longitude;
         var latitude = position.coords.latitude;
-        var point = new BMap.Point(longitude, latitude);//百度地图格式坐标
+        var gps=gcj02_To_Bd09(longitude,latitude);//坐标转换
+
+        var point = new BMap.Point(gps[0], gps[1]);//百度地图格式坐标
 
         //百度地图
-	var map = new BMap.Map("container");
-	map.centerAndZoom(point, 15);// 初始化地图，设置中心点坐标和地图级别  
-	var marker = new BMap.Marker(point);        // 创建标注    
-	map.addOverlay(marker);
-        var convertor = new BMap.Convertor();
-        var pointArr = [];
-        pointArr.push(point);
-        convertor.translate(pointArr, 3, 5, translateCallback)
-	alert('translateCallback');
-	var translateCallback=function(data){
-		alert('translateCallback');
-		alert(data.status);
-		if(data.status===0){
-			var marker=new BMap.Marker(data.points[0]);
-			map.addOverlay(marker);
-			map.setCenter(data.points[0]);
-			// 创建地理编码实例  
-			var myGeo = new BMap.Geocoder();      
-			// 根据坐标得到地址描述    
-			myGeo.getLocation(new BMap.Point(longitude, latitude), function(result){      
-			    if (result){      
-			    alert(result.address); 
-			    document.getElementById('geocoder').text(result.address);
-			    }      
-			});
-		}
-	}
+		var map = new BMap.Map("container");
+		map.centerAndZoom(point, 15);// 初始化地图，设置中心点坐标和地图级别  
+		var marker = new BMap.Marker(point);        // 创建标注    
+		map.addOverlay(marker);
+		// 创建地理编码实例  
+		var myGeo = new BMap.Geocoder();      
+		// 根据坐标得到地址描述    
+		myGeo.getLocation(new BMap.Point(longitude, latitude), function(result){      
+		    if (result){      
+		    alert(result.address); 
+		    document.getElementById('geocoder').innerHTML(result.address);
+		    }      
+		});
+
+		//  translateCallback=function(data){
+		// 	alert(data.status);
+		// 	if(data.status===0){
+		// 		var marker=new BMap.Marker(data.points[0]);
+		// 		map.addOverlay(marker);
+		// 		map.setCenter(data.points[0]);
+		// 		// 创建地理编码实例  
+		// 		var myGeo = new BMap.Geocoder();      
+		// 		// 根据坐标得到地址描述    
+		// 		myGeo.getLocation(new BMap.Point(longitude, latitude), function(result){      
+		// 		    if (result){      
+		// 		    alert(result.address); 
+		// 		    document.getElementById('geocoder').text(result.address);
+		// 		    }      
+		// 		});
+		// 	}
+		// }
 
 		// setTimeout(function(){
 		//         var convertor = new BMap.Convertor();
