@@ -19,6 +19,7 @@ $(function(){
 	var can=document.getElementById('canvas'),
 		canvas=can.getContext("2d"),
 		maxRadius=400,
+		parmsColor=["#FC0A24","#F508CB","#1712E0","#F05017","#0FE3F5"]
 		parms=[];
 		can.width = $(window).width();
 		can.height = $(window).height();
@@ -32,6 +33,7 @@ $(function(){
 		    return(Min + Math.round(Rand * Range));   
 		}  
 
+		// return parmsColor[GetRandomNum(0,4)];
 		return 'rgb('+GetRandomNum(1,255)+','+GetRandomNum(1,255)+','+GetRandomNum(1,255)+')';
 	}
 
@@ -57,13 +59,14 @@ $(function(){
 			{
 				"x":centreX,
 				"y":centreY,
-				"radius":1
+				"radius":1,
+				"color":randomColor()
 			}
 		)
 	})
 	//画圆
-	var drawCircle=function(x,y,radius){
-		canvas.strokeStyle=randomColor();
+	var drawCircle=function(x,y,radius,color){
+		canvas.strokeStyle=color;
 		
 		canvas.beginPath();
 		canvas.arc(x,y,++radius,0,2*Math.PI,true);
@@ -80,7 +83,7 @@ $(function(){
 
 		for(var i=0;i<parms.length;i++){
 			if(parms[i].radius<=maxRadius){
-				drawCircle(parms[i].x,parms[i].y,++parms[i].radius);//画圆
+				drawCircle(parms[i].x,parms[i].y,++parms[i].radius,parms[i].color);//画圆
 			}else{
 				parms.splice(i,1)
 			}
