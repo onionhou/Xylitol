@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>geolocation 地理定位</title>
+	</head>
+	<body>
+		<input type="text"  id="jd" value=""/>经度<br />
+		<input type="text"  id="wd" value=""/>纬度<br />
+		
+		<script type="text/javascript">
+			var jd = document.getElementById("jd");
+			var wd = document.getElementById("wd");
+			
+			function getLocation(){
+				if(navigator.geolocation)
+				{
+					console.log("111");
+					navigator.geolocation.getCurrentPosition(showPosition);
+					
+				}
+				else
+				{
+					jd.value="你支持0";
+				}
+			}
+			
+			getLocation();
+			function showPosition(position)
+			{
+				console.log("111");
+				jd.value=position.coords.latitude;
+				wd.value=position.coords.longitude;
+				
+			}
+		</script>
+	</body>
+</html>

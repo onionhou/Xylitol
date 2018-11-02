@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>canvas 画布</title>
+		<style type="text/css">
+			Canvas {
+			    border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="Canvas1" width="300px" height="300px">
+		</canvas>
+		<canvas id="Canvas2" width="300px" height="300px"></canvas>
+		<canvas id="Canvas3" width="300px" height="300px"></canvas>
+		<canvas id="Canvas4" width="300px" height="300px">如果浏览器 不支持 canvas 讲显示文字，支持则 正常渲染canvas</canvas>
+		<canvas id="canvas5" width="300px" height="300px"></canvas>
+		<canvas id="bezier" width="300px" height="300px"></canvas>
+		<canvas id="bezierAnimate" width="300px" height="300px"></canvas>
+		<script type="text/javascript">
+			//矩形
+			var cvs=document.getElementById("Canvas1");
+			var cnt=cvs.getContext("2d");
+			cnt.fillStyle="aliceblue";
+			cnt.fillRect(100,100,50,50);
+			
+			var c2=document.getElementById("Canvas2");
+			var ct2=c2.getContext("2d");
+			ct2.strokeStyle = "#00FFFF";
+			ct2.moveTo(150,110);
+			ct2.lineTo(110,200);
+			ct2.lineTo(200,150);
+			ct2.lineTo(100,150);
+			ct2.lineTo(190,200);
+			ct2.lineTo(150,110);
+			ct2.stroke();
+			
+			var c3=document.getElementById("Canvas3");
+			var ct3=c3.getContext("2d");
+			
+			ct3.arc(100,150,50,Math.PI*1.75,Math.PI*1.25,true);
+			ct3.strokeStyle="chartreuse";
+			ct3.lineWidth=3; //当前画线的宽
+			ct3.stroke();
+			
+			ct3.beginPath();
+			ct3.arc(200,150,50,Math.PI*1.75,Math.PI*1.25,true);
+			ct3.strokeStyle="chartreuse";
+			ct3.stroke();
+			//beginpath();重新开始路径，或者说是重置路径。 要是不写beginpath()的话，
+			//后面的样式（lineWidth,strokeStyle）会覆盖前面的样式
+			ct3.beginPath();
+			ct3.arc(150,150,50,0,Math.PI*1,false);
+			ct3.strokeStyle="red";
+			ct3.stroke();
+			
+			var c4=document.getElementById("Canvas4");
+			var ct4=c4.getContext("2d");
+			
+			var img=new Image();
+			img.src="img/2.jpg";
+			console.log(img);
+			img.onload = function(){ct4.drawImage(img,0,0)}
+			//绘制图片 得等图片加载完成
+			ct4.drawImage(img,0,0);
+
+			var draw=function(id){
+				var canvas=document.getElementById(id)
+				var cvs=canvas.getContext('2d');
+				console.log('arc');
+				return cvs;
+			}
+
+			function draw5(){
+				var canvas=draw('canvas5');
+				canvas.strokeStyle="pink";
+				canvas.lineWidth=2;
+				canvas.beginPath();
+				canvas.moveTo(20,20);
+				canvas.lineTo(20,200);
+				canvas.lineTo(90,200);
+				canvas.closePath();
+				canvas.stroke();
+
+				canvas.beginPath();
+				canvas.arc(150,150,10,0,180,false); //弧度=(Math.PI/180)*角度。
+				canvas.stroke();
+			}
+			draw5();
+
+			 function drawbezier(){
+			 	var canvas=draw('bezier');
+			 	canvas.strokeStyle='skyblue';
+			 	canvas.beginPath();
+			 	canvas.moveTo(150,250);
+			 	canvas.quadraticCurveTo(175,245,180,220);
+			 	canvas.quadraticCurveTo(250,215,250,190);
+			 	canvas.quadraticCurveTo(250,165,180,160);
+			 	canvas.quadraticCurveTo(110,165,110,190);
+			 	canvas.quadraticCurveTo(110,215,160,220);
+			 	canvas.quadraticCurveTo(175,245,150,250);
+			 	canvas.stroke();
+			 }
+			 drawbezier();
+			
+			function drawbezierAnimate(){
+				var canvas=draw('bezierAnimate');
+				
+
+				var bezier=document.getElementById('bezierAnimate');
+				var x=250,
+					y=150;
+
+				bezier.addEventListener('mousemove',function(e){
+					var eve = e || window.event;
+					var offsetX=eve.offsetX,
+						offsetY=eve.offsetY;
+					//清除画布内容
+					canvas.clearRect(0,0,bezier.width,bezier.height);
+					console.log(canvas.width);
+					canvas.beginPath();
+					canvas.moveTo(offsetX,offsetY);
+					canvas.arc(offsetX,offsetY,2,0,Math.PI*2,false);
+
+					canvas.moveTo(50,150);
+					canvas.quadraticCurveTo(offsetX,offsetY,x,y);
+					canvas.stroke();
+				})
+				
+			}
+			drawbezierAnimate();
+		</script>
+	</body> 
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">	
+	<title>无可奈何</title>
+<style type="text/css">
+	html,body{width: 100%;height: 100%;margin: 0px;}
+	body{background: black;overflow:visible;-webkit-transform: translateZ(0);}
+</style>	
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	var can=document.getElementById('canvas'),
+		canvas=can.getContext("2d"),
+		maxRadius=400,
+		parms=[];
+		can.width = $(window).width();
+		can.height = $(window).height();
+	
+	//颜色随机
+	var randomColor=function(){
+		function GetRandomNum(Min,Max)
+		{
+		    var Range = Max - Min;   
+		    var Rand = Math.random();   
+		    return(Min + Math.round(Rand * Range));   
+		}  
+
+		return 'rgb('+GetRandomNum(1,255)+','+GetRandomNum(1,255)+','+GetRandomNum(1,255)+')';
+	}
+
+	
+
+	can.addEventListener('touchstart', function (event) {
+		var touch = event.changedTouches[0];
+		var centreX=touch.clientX;
+		var centreY=touch.clientY;
+		parms.push(
+			{
+				"x":centreX,
+				"y":centreY,
+				"radius":1
+			}
+		)
+	})	
+	can.addEventListener('touchmove', function (event) {
+		var touch = event.changedTouches[0];
+		var centreX=touch.clientX;
+		var centreY=touch.clientY;
+		parms.push(
+			{
+				"x":centreX,
+				"y":centreY,
+				"radius":1
+			}
+		)
+	})
+	//画圆
+	var drawCircle=function(x,y,radius){
+		canvas.strokeStyle=randomColor();
+		
+		canvas.beginPath();
+		canvas.arc(x,y,++radius,0,2*Math.PI,true);
+		canvas.stroke();
+	}
+
+	
+	//
+	var updataAll=function(){
+		if(parms.length == 0){
+			return;
+		}
+		canvas.clearRect(0, 0, can.width, can.height);//清空画布
+
+		for(var i=0;i<parms.length;i++){
+			if(parms[i].radius<=maxRadius){
+				drawCircle(parms[i].x,parms[i].y,++parms[i].radius);//画圆
+			}else{
+				parms.splice(i,1)
+			}
+			
+		}
+	}
+
+	setInterval(updataAll,50);
+})
+</script>
+</body>
+</html>

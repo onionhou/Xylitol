@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		用户<input type="text" id="name" placeholder="账号"/><br />
+		密码<input type="password" id="pass" placeholder="密码"/><br />
+		<input type="button" value="添加用户" onclick="add()"/>
+		<input type="button" value="删除用户" onclick="del()"/>
+		<input type="button" value="查询用户" onclick="query()"/>
+		<input type="button" value="所有用户" onclick="show()"/>
+		<div id="list" style="width: 500px;border: 1px solid #00FFFF;">
+			
+		</div>
+		<script>
+			var name=document.getElementById("name");
+			var pass=document.getElementById("pass");
+			function add(){
+				if(typeof(localStorage)!=="undefined"){
+					
+					if(name.value!="" && pass.value!=""){
+						localStorage.setItem(name.value,pass.value);
+						alert('保存成功');
+					}
+					else
+					{
+						alert(localStorage.getItem(name));
+					}
+				}
+				else
+				{
+					alert("sorry you no can")
+				}
+			}
+			
+			function show(){
+				
+				document.getElementById("list").innerHTML="用户名："+localStorage.getItem("123");
+			}
+		</script>
+	</body>
+</html>

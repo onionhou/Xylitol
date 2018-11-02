@@ -1,0 +1,7 @@
+html5
+八个新的语义HTML元素  
+需要全部设置为块级元素，来确保就浏览器识别
+header,section,footer,aside,nav,main,article,figure{
+	display:block;
+}
+

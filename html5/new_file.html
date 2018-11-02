@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#Canvas4 {
+				border: 1px solid brown;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="Canvas4" width="500px" height="500px"></canvas>
+		
+		<script type="text/javascript">
+			var c4=document.getElementById("Canvas4");
+			var ct4=c4.getContext("2d");
+			
+			var img=new Image();
+			img.src="img/2.jpg";
+			ct4.drawImage(img,0,0); 
+			console.log(img);
+		</script>
+	</body>
+</html>

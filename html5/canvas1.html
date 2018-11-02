@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+</style>
+</head>
+<body style="padding-top: 10px">
+	<div style="margin: 0 auto;">
+	 <canvas height="800px" width="800px" id="canvas">
+	 </canvas>
+	</div> 
+<script type="text/javascript">
+	var can=document.getElementById("canvas");
+	var canvas=can.getContext("2d");
+		canvas.strokeStyle='block';
+
+	var roundedRect=function(canvas,x,y,width,height,radius){
+		console.log('canvas');
+		canvas.beginPath();
+		canvas.moveTo(x+radius,y);
+		canvas.lineTo(x+width-radius,y);
+		canvas.quadraticCurveTo(x+width,y,x+width,y+radius);
+		canvas.lineTo(x+width,y+height-radius);
+		canvas.quadraticCurveTo(x+width,y+height,x+width-radius,y+height);
+		canvas.lineTo(x+radius,y+height);
+		canvas.quadraticCurveTo(x,y+height,x,y+height-radius);
+		canvas.lineTo(x,y+radius);
+		canvas.quadraticCurveTo(x,y,x+radius,y)
+		canvas.stroke();
+	}
+	roundedRect(canvas,50,50,100,100,10);
+
+	/**
+	 * [monster description]
+	 * @param  {[type]} canvas [description] 画笔
+	 * @param  {[type]} x      [description] x坐标
+	 * @param  {[type]} y      [description] y坐标
+	 * @param  {[type]} w      [description] 宽
+	 * @param  {[type]} h      [description] 高
+	 * @param  {[type]} s      [description] 锯齿
+	 * @return {[type]}        [description]
+	 */
+	var monster=function(canvas,x,y,w,h,s){
+		canvas.beginPath();
+		canvas.moveTo(x,y+h);
+		canvas.lineTo(x,y+h/2);
+		canvas.quadraticCurveTo(x,y,x+w/2,y);
+		canvas.quadraticCurveTo(x+w,y,x+w,y+h/2);
+
+		
+		for(var index=1,i=0;i<=w;index++){
+			if(index%2==0){
+				canvas.lineTo(x+w-i,y+h-5);
+			}else{
+				canvas.lineTo(x+w-i,y+h);
+			}
+			i+=5;
+		}
+		canvas.fill();
+		// canvas.lineTo(x+w,y+h);
+		// canvas.lineTo(x+w-5,y+h-5);
+		// canvas.lineTo(x+w-10,y+h);
+		// canvas.lineTo(x+w-15,y+h-5);
+		// canvas.lineTo(x+w-20,y+h);
+		// canvas.lineTo(x+w-25,y+h-5);
+		// canvas.lineTo(x+w-30,y+h);
+		// canvas.lineTo(x+w-35,y+h-5);
+		// canvas.lineTo(x,y+h);
+		//eyes
+		canvas.strokeStyle='white';
+		canvas.beginPath();
+		canvas.moveTo(x+w/4,y+w/4);
+		canvas.quadraticCurveTo(x,y+w/2,x+w/4,y+w*3/4);
+		canvas.quadraticCurveTo(x+w/2,y+w/2,x+w/4,y+w/4);
+		canvas.fill();
+		
+		canvas.beginPath();
+		canvas.moveTo(x+w*3/4,y+w/4);
+		canvas.quadraticCurveTo(x+w/2,y+w/2,x+w*3/4,y+w*3/4);
+		canvas.quadraticCurveTo(x+w,y+w/2,x+w*3/4,y+w/4);
+		canvas.fill();
+	}
+	monster(canvas,200,50,40,40,5);
+	
+</script>
+</body>
+</html>

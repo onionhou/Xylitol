@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="txt"/>
+		<input type="button" value="计数" onclick="jishu()"/>
+		<script>
+			if(typeof(Storage)!=="undefined")
+			{
+				localStorage.setItem(name,"whywhyme")
+				document.getElementById("txt").value =localStorage.getItem(name);
+			}
+			
+			function jishu()
+			{
+				if(typeof(Storage)!=="undefined")
+				{
+					 if(localStorage.clickcount)
+					 {
+					 	localStorage.clickcount=Number(localStorage.clickcount)+1;
+					 }
+					 else
+					 {
+					 	localStorage.clickcount=1;
+					 }
+					 document.getElementById("txt").value=localStorage.clickcount;
+				}
+				else
+				{
+					document.getElementsByTagName("body")[0].innerHTML="对不起柠乐";
+				}
+			}
+		</script>
+	</body>
+</html>
