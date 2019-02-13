@@ -356,3 +356,143 @@ function help(){
     var $v =$("#v") ; //jQuery对象 
     var v=$v[0]; //js对象 
 }
+
+//二级联动
+var setCitylinkage = function(data){
+    var province = '湖南';
+
+    var setCity = function(){
+        var option1 = '';
+        $.each(GC1[province],function(index,value){
+            option1 += '<option value="'+value+'">'+value+'</option>';
+        });
+        $(data.s1).html(option1);
+        form.render('select',data.layform);
+    }
+    setCity();
+    var setDistrict = function(arr){
+        var option2 = '';
+        $.each(arr,function(index,value){
+            option2 += '<option value="'+value+'">'+value+'</option>';
+        })
+        $(data.s2).html(option2);
+        form.render('select',data.layform);
+    }
+    setDistrict(GC2[province][data.city]);  
+
+    $(data.s1).change(function(){
+        var opt=$(this).find('option:selected').val();
+        setDistrict(GC2[province][opt]);
+    });
+}
+
+//定位
+var location = function(){
+    var cityLocation, map, marker = null;
+    var options={
+            enableHighAccuracy:true,//开启高精度
+            maximumAge:1000
+        }
+        if(navigator.geolocation){
+            //浏览器支持geolocation
+            navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
+        }else{
+            //浏览器不支持geolocation
+            errGoIndex('您的浏览器不支持地理位置定位');
+            //如果不支持geolocation 调用腾讯定位
+            var geolocation = new qq.maps.Geolocation("WSOBZ-5TDWD-ASB4T-PXVZT-OAOAJ-2EF5F", "myapp");
+
+            if (geolocation) {
+            var options = {timeout: 20000};
+            geolocation.getLocation(qqSuccess, showErr, options);
+            } else {
+                errGoIndex("定位尚未加载");
+            }
+
+        }
+        //失败时
+     function onError(error){
+        status=true;
+        switch(error.code){
+            case error.PERMISSION_DENIED:
+                errGoIndex("定位失败,用户拒绝请求地理定位");
+                break;
+            case error.POSITION_UNAVAILABLE:
+                errGoIndex("定位失败,位置信息是不可用");
+                break;
+            case error.TIMEOUT:
+                errGoIndex("定位失败,请求获取用户位置超时");
+                break;
+            case error.UNKNOWN_ERROR:
+                errGoIndex("定位失败,定位系统失效");
+                break;
+        }
+    }
+    function onSuccess(position){
+        var locationAddress = {};
+        //经度
+        var longitude = position.coords.longitude;
+        //纬度
+        var latitude = position.coords.latitude;
+
+        var myGeo = new BMap.Geocoder();
+        myGeo.getLocation(new BMap.Point(longitude, latitude), function(result){      
+            if(result){      
+                // result.address
+                var city = result.addressComponents.city;
+
+                locationAddress.city = city;
+                sessionStorage.setItem('address', JSON.stringify(locationAddress));
+                $('.head-top-locat span').html(city.substring(0,city.length-1)+' <i class="icon icon-xl"></i>');
+            }      
+        });
+
+        // $.ajax({
+        //     type: 'post',
+        //     dataType: 'json',
+        //     url: 'http://api.map.baidu.com/geocoder/v2/?callback=renderReverse&location='+longitude+','+latitude+'&output=json&pois=1&ak=wrwzzN2LDpqR6sQoGGkEVGG3gpNRlEeW ',
+        //     success: function(res){
+        //         alert(res);
+        //     },
+        //     error: function(XMLHttpRequest){
+        //         alert(XMLHttpRequest);                    
+        //     }
+        // })
+    }
+
+    function qqSuccess(){
+        //提取 坐标
+        var city = '';
+        var mapInfo = JSON.stringify(position, null, 4);
+        var jsonMapInfo = eval('('+mapInfo+')');
+        var longitude = jsonMapInfo.lng;
+        var latitude = jsonMapInfo.lat;
+        
+        var latlng = qq.maps.LatLng(longitude,latitude);// Latlng 坐标
+
+        //城市信息查询服务
+        citylocation = new qq.maps.CityService({
+            //请求成功回调函数
+            complete: function(result){
+                city = result.detail.name;
+                alert(city);
+            },
+            error: function() {
+                alert("出错了，请输入正确的经纬度！！！");
+            }
+        });
+        cityLocation.searchCityByLatLng(latlng);//调用经纬度查询接口
+        cityLocation.searchCityByName(city);//调用城市查询接口
+    }
+} 
+
+var onloadLoaction = function(){
+    var address = JSON.parse(sessionStorage.getItem('address'));
+
+    if(address){
+        $('.head-top-locat span').html(address.city+'<i class="icon icon-xl"></i>');
+    }else{
+        location();
+    }
+}
+onloadLoaction();
